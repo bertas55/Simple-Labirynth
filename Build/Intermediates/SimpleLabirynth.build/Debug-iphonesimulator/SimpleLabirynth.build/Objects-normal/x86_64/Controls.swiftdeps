@@ -1,0 +1,358 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Controls"
+- "Button"
+provides-nominal:
+- "C15SimpleLabirynth8Controls"
+- "C15SimpleLabirynth6Button"
+provides-member:
+- ["C15SimpleLabirynth8Controls", ""]
+- ["C15SimpleLabirynth6Button", ""]
+provides-dynamic-lookup:
+- "button"
+- "didMoveToView"
+- "texture"
+- "coord"
+- "sprite"
+depends-top-level:
+- "Button"
+- !private "StringLiteralType"
+- "SKScene"
+- !private "SKColor"
+- !private "fatalError"
+- "SKView"
+- "Controls"
+- "SKTexture"
+- "CGPoint"
+- !private "CGRectGetMidY"
+- !private "CGRectGetMidX"
+- "NSCoder"
+- "SKNode"
+- "CGSize"
+- "SKSpriteNode"
+depends-member:
+- !private ["Ps9AnyObject", "CGPoint"]
+- !private ["Ps9AnyObject", "CGRectGetMidX"]
+- !private ["Ps9AnyObject", "CGRectGetMidY"]
+- !private ["Ps9AnyObject", "CGSize"]
+- !private ["Ps9AnyObject", "SKColor"]
+- !private ["Ps9AnyObject", "SKSpriteNode"]
+- !private ["Ps9AnyObject", "addChild"]
+- ["Ps9AnyObject", "button"]
+- ["Ps9AnyObject", "coord"]
+- ["Ps9AnyObject", "didMoveToView"]
+- !private ["Ps9AnyObject", "fatalError"]
+- !private ["Ps9AnyObject", "frame"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "position"]
+- !private ["Ps9AnyObject", "redColor"]
+- ["Ps9AnyObject", "sprite"]
+- ["Ps9AnyObject", "texture"]
+- ["Ps9AnyObject", ""]
+- ["C15SimpleLabirynth6Button", "CGPoint"]
+- ["C15SimpleLabirynth6Button", "CGSize"]
+- ["C15SimpleLabirynth6Button", "NSCoder"]
+- ["C15SimpleLabirynth6Button", "SKSpriteNode"]
+- ["C15SimpleLabirynth6Button", "SKTexture"]
+- !private ["C15SimpleLabirynth6Button", "addChild"]
+- ["C15SimpleLabirynth6Button", "coord"]
+- ["C15SimpleLabirynth6Button", "deinit"]
+- !private ["C15SimpleLabirynth6Button", "fatalError"]
+- ["C15SimpleLabirynth6Button", "init"]
+- ["C15SimpleLabirynth6Button", "sprite"]
+- ["C15SimpleLabirynth6Button", "texture"]
+- !private ["VSC7CGPoint", "init"]
+- !private ["VSC6CGSize", "init"]
+- !private ["Ps11CVarArgType", "CGPoint"]
+- !private ["Ps11CVarArgType", "CGRectGetMidX"]
+- !private ["Ps11CVarArgType", "CGRectGetMidY"]
+- !private ["Ps11CVarArgType", "CGSize"]
+- !private ["Ps11CVarArgType", "SKColor"]
+- !private ["Ps11CVarArgType", "SKSpriteNode"]
+- !private ["Ps11CVarArgType", "addChild"]
+- ["Ps11CVarArgType", "button"]
+- ["Ps11CVarArgType", "coord"]
+- ["Ps11CVarArgType", "didMoveToView"]
+- !private ["Ps11CVarArgType", "fatalError"]
+- !private ["Ps11CVarArgType", "frame"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "position"]
+- !private ["Ps11CVarArgType", "redColor"]
+- ["Ps11CVarArgType", "sprite"]
+- ["Ps11CVarArgType", "texture"]
+- ["Ps11CVarArgType", ""]
+- !private ["C15SimpleLabirynth8Controls", "CGPoint"]
+- !private ["C15SimpleLabirynth8Controls", "CGRectGetMidX"]
+- !private ["C15SimpleLabirynth8Controls", "CGRectGetMidY"]
+- !private ["C15SimpleLabirynth8Controls", "CGSize"]
+- !private ["C15SimpleLabirynth8Controls", "SKColor"]
+- ["C15SimpleLabirynth8Controls", "SKNode"]
+- !private ["C15SimpleLabirynth8Controls", "SKSpriteNode"]
+- ["C15SimpleLabirynth8Controls", "SKView"]
+- !private ["C15SimpleLabirynth8Controls", "addChild"]
+- ["C15SimpleLabirynth8Controls", "button"]
+- ["C15SimpleLabirynth8Controls", "deinit"]
+- ["C15SimpleLabirynth8Controls", "didMoveToView"]
+- !private ["C15SimpleLabirynth8Controls", "frame"]
+- ["C15SimpleLabirynth8Controls", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidX"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidY"]
+- !private ["Ps28CustomDebugStringConvertible", "CGSize"]
+- !private ["Ps28CustomDebugStringConvertible", "SKColor"]
+- !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
+- !private ["Ps28CustomDebugStringConvertible", "addChild"]
+- ["Ps28CustomDebugStringConvertible", "button"]
+- ["Ps28CustomDebugStringConvertible", "coord"]
+- ["Ps28CustomDebugStringConvertible", "didMoveToView"]
+- !private ["Ps28CustomDebugStringConvertible", "fatalError"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "position"]
+- !private ["Ps28CustomDebugStringConvertible", "redColor"]
+- ["Ps28CustomDebugStringConvertible", "sprite"]
+- ["Ps28CustomDebugStringConvertible", "texture"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps23CustomStringConvertible", "CGPoint"]
+- !private ["Ps23CustomStringConvertible", "CGRectGetMidX"]
+- !private ["Ps23CustomStringConvertible", "CGRectGetMidY"]
+- !private ["Ps23CustomStringConvertible", "CGSize"]
+- !private ["Ps23CustomStringConvertible", "SKColor"]
+- !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
+- !private ["Ps23CustomStringConvertible", "addChild"]
+- ["Ps23CustomStringConvertible", "button"]
+- ["Ps23CustomStringConvertible", "coord"]
+- ["Ps23CustomStringConvertible", "didMoveToView"]
+- !private ["Ps23CustomStringConvertible", "fatalError"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "position"]
+- !private ["Ps23CustomStringConvertible", "redColor"]
+- ["Ps23CustomStringConvertible", "sprite"]
+- ["Ps23CustomStringConvertible", "texture"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "CGPoint"]
+- !private ["Ps9Equatable", "CGRectGetMidX"]
+- !private ["Ps9Equatable", "CGRectGetMidY"]
+- !private ["Ps9Equatable", "CGSize"]
+- !private ["Ps9Equatable", "SKColor"]
+- !private ["Ps9Equatable", "SKSpriteNode"]
+- !private ["Ps9Equatable", "addChild"]
+- ["Ps9Equatable", "button"]
+- ["Ps9Equatable", "coord"]
+- ["Ps9Equatable", "didMoveToView"]
+- !private ["Ps9Equatable", "fatalError"]
+- !private ["Ps9Equatable", "frame"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "position"]
+- !private ["Ps9Equatable", "redColor"]
+- ["Ps9Equatable", "sprite"]
+- ["Ps9Equatable", "texture"]
+- ["Ps9Equatable", ""]
+- !private ["Ps8Hashable", "CGPoint"]
+- !private ["Ps8Hashable", "CGRectGetMidX"]
+- !private ["Ps8Hashable", "CGRectGetMidY"]
+- !private ["Ps8Hashable", "CGSize"]
+- !private ["Ps8Hashable", "SKColor"]
+- !private ["Ps8Hashable", "SKSpriteNode"]
+- !private ["Ps8Hashable", "addChild"]
+- ["Ps8Hashable", "button"]
+- ["Ps8Hashable", "coord"]
+- ["Ps8Hashable", "didMoveToView"]
+- !private ["Ps8Hashable", "fatalError"]
+- !private ["Ps8Hashable", "frame"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "position"]
+- !private ["Ps8Hashable", "redColor"]
+- ["Ps8Hashable", "sprite"]
+- ["Ps8Hashable", "texture"]
+- ["Ps8Hashable", ""]
+- !private ["PSo8NSCoding", "CGPoint"]
+- !private ["PSo8NSCoding", "CGRectGetMidX"]
+- !private ["PSo8NSCoding", "CGRectGetMidY"]
+- !private ["PSo8NSCoding", "CGSize"]
+- !private ["PSo8NSCoding", "SKColor"]
+- !private ["PSo8NSCoding", "SKSpriteNode"]
+- !private ["PSo8NSCoding", "addChild"]
+- ["PSo8NSCoding", "button"]
+- ["PSo8NSCoding", "coord"]
+- ["PSo8NSCoding", "didMoveToView"]
+- !private ["PSo8NSCoding", "fatalError"]
+- !private ["PSo8NSCoding", "frame"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "position"]
+- !private ["PSo8NSCoding", "redColor"]
+- ["PSo8NSCoding", "sprite"]
+- ["PSo8NSCoding", "texture"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "CGPoint"]
+- !private ["PSo9NSCopying", "CGRectGetMidX"]
+- !private ["PSo9NSCopying", "CGRectGetMidY"]
+- !private ["PSo9NSCopying", "CGSize"]
+- !private ["PSo9NSCopying", "SKColor"]
+- !private ["PSo9NSCopying", "SKSpriteNode"]
+- !private ["PSo9NSCopying", "addChild"]
+- ["PSo9NSCopying", "button"]
+- ["PSo9NSCopying", "coord"]
+- ["PSo9NSCopying", "didMoveToView"]
+- !private ["PSo9NSCopying", "fatalError"]
+- !private ["PSo9NSCopying", "frame"]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "position"]
+- !private ["PSo9NSCopying", "redColor"]
+- ["PSo9NSCopying", "sprite"]
+- ["PSo9NSCopying", "texture"]
+- ["PSo9NSCopying", ""]
+- ["CSo8NSObject", "CGPoint"]
+- !private ["CSo8NSObject", "CGRectGetMidX"]
+- !private ["CSo8NSObject", "CGRectGetMidY"]
+- ["CSo8NSObject", "CGSize"]
+- ["CSo8NSObject", "NSCoder"]
+- !private ["CSo8NSObject", "SKColor"]
+- ["CSo8NSObject", "SKNode"]
+- ["CSo8NSObject", "SKSpriteNode"]
+- ["CSo8NSObject", "SKTexture"]
+- ["CSo8NSObject", "SKView"]
+- !private ["CSo8NSObject", "addChild"]
+- ["CSo8NSObject", "button"]
+- ["CSo8NSObject", "coord"]
+- ["CSo8NSObject", "didMoveToView"]
+- !private ["CSo8NSObject", "fatalError"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "position"]
+- !private ["CSo8NSObject", "redColor"]
+- ["CSo8NSObject", "sprite"]
+- ["CSo8NSObject", "texture"]
+- !private ["PSo16NSObjectProtocol", "CGPoint"]
+- !private ["PSo16NSObjectProtocol", "CGRectGetMidX"]
+- !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
+- !private ["PSo16NSObjectProtocol", "CGSize"]
+- !private ["PSo16NSObjectProtocol", "SKColor"]
+- !private ["PSo16NSObjectProtocol", "SKSpriteNode"]
+- !private ["PSo16NSObjectProtocol", "addChild"]
+- ["PSo16NSObjectProtocol", "button"]
+- ["PSo16NSObjectProtocol", "coord"]
+- ["PSo16NSObjectProtocol", "didMoveToView"]
+- !private ["PSo16NSObjectProtocol", "fatalError"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "position"]
+- !private ["PSo16NSObjectProtocol", "redColor"]
+- ["PSo16NSObjectProtocol", "sprite"]
+- ["PSo16NSObjectProtocol", "texture"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "redColor"]
+- !private ["CSo12SKEffectNode", "CGPoint"]
+- !private ["CSo12SKEffectNode", "CGRectGetMidX"]
+- !private ["CSo12SKEffectNode", "CGRectGetMidY"]
+- !private ["CSo12SKEffectNode", "CGSize"]
+- !private ["CSo12SKEffectNode", "SKColor"]
+- ["CSo12SKEffectNode", "SKNode"]
+- !private ["CSo12SKEffectNode", "SKSpriteNode"]
+- ["CSo12SKEffectNode", "SKView"]
+- !private ["CSo12SKEffectNode", "addChild"]
+- ["CSo12SKEffectNode", "button"]
+- ["CSo12SKEffectNode", "didMoveToView"]
+- !private ["CSo12SKEffectNode", "frame"]
+- ["CSo12SKEffectNode", "init"]
+- ["CSo6SKNode", "CGPoint"]
+- !private ["CSo6SKNode", "CGRectGetMidX"]
+- !private ["CSo6SKNode", "CGRectGetMidY"]
+- ["CSo6SKNode", "CGSize"]
+- ["CSo6SKNode", "NSCoder"]
+- !private ["CSo6SKNode", "SKColor"]
+- ["CSo6SKNode", "SKNode"]
+- ["CSo6SKNode", "SKSpriteNode"]
+- ["CSo6SKNode", "SKTexture"]
+- ["CSo6SKNode", "SKView"]
+- !private ["CSo6SKNode", "addChild"]
+- ["CSo6SKNode", "button"]
+- ["CSo6SKNode", "coord"]
+- ["CSo6SKNode", "didMoveToView"]
+- !private ["CSo6SKNode", "fatalError"]
+- !private ["CSo6SKNode", "frame"]
+- ["CSo6SKNode", "init"]
+- !private ["CSo6SKNode", "position"]
+- ["CSo6SKNode", "sprite"]
+- ["CSo6SKNode", "texture"]
+- ["CSo6SKNode", ""]
+- !private ["CSo7SKScene", "CGPoint"]
+- !private ["CSo7SKScene", "CGRectGetMidX"]
+- !private ["CSo7SKScene", "CGRectGetMidY"]
+- !private ["CSo7SKScene", "CGSize"]
+- !private ["CSo7SKScene", "SKColor"]
+- ["CSo7SKScene", "SKNode"]
+- !private ["CSo7SKScene", "SKSpriteNode"]
+- ["CSo7SKScene", "SKView"]
+- !private ["CSo7SKScene", "addChild"]
+- ["CSo7SKScene", "button"]
+- ["CSo7SKScene", "didMoveToView"]
+- !private ["CSo7SKScene", "frame"]
+- ["CSo7SKScene", "init"]
+- ["CSo7SKScene", ""]
+- !private ["CSo12SKSpriteNode", "init"]
+- !private ["Vs12StaticString", "deinit"]
+- !private ["CSo7UIColor", "redColor"]
+- ["CSo11UIResponder", "CGPoint"]
+- !private ["CSo11UIResponder", "CGRectGetMidX"]
+- !private ["CSo11UIResponder", "CGRectGetMidY"]
+- ["CSo11UIResponder", "CGSize"]
+- ["CSo11UIResponder", "NSCoder"]
+- !private ["CSo11UIResponder", "SKColor"]
+- ["CSo11UIResponder", "SKNode"]
+- ["CSo11UIResponder", "SKSpriteNode"]
+- ["CSo11UIResponder", "SKTexture"]
+- ["CSo11UIResponder", "SKView"]
+- !private ["CSo11UIResponder", "addChild"]
+- ["CSo11UIResponder", "button"]
+- ["CSo11UIResponder", "coord"]
+- ["CSo11UIResponder", "didMoveToView"]
+- !private ["CSo11UIResponder", "fatalError"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "position"]
+- ["CSo11UIResponder", "sprite"]
+- ["CSo11UIResponder", "texture"]
+- !private ["Ps24_ColorLiteralConvertible", "redColor"]
+- !private ["Ps12_Reflectable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C15SimpleLabirynth6Button"
+- !private "VSC7CGPoint"
+- !private "VSC6CGSize"
+- "Ps11CVarArgType"
+- "C15SimpleLabirynth8Controls"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- "CSo12SKEffectNode"
+- "CSo6SKNode"
+- "CSo7SKScene"
+- !private "CSo12SKSpriteNode"
+- !private "Vs12StaticString"
+- !private "CSo7UIColor"
+- "CSo11UIResponder"
+- !private "Ps24_ColorLiteralConvertible"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SpriteKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GameplayKit.swiftmodule"
+interface-hash: "44dcb91a7dd4bd24abb3d604f4d0e7d4"

@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "de32abe6dce3e77a807fac480fd41cb9"
+build_time: [519934283, 510178000]
+inputs:
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/TileMap.swift": [519933978, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Scene.swift": [519934118, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/GameViewController.swift": [519931537, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/AppDelegate.swift": [519906692, 0]
