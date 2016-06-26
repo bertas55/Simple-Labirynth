@@ -64,6 +64,7 @@
 		B4969C4C1D1AA084008B3451 /* SimpleLabirynth */ = {
 			isa = PBXGroup;
 			children = (
+				B421655F1D1BDC1500FA8F8B /* Assets.xcassets */,
 				B463B8AE1D1C8E6E00655A4D /* MazeBuilder.swift */,
 				B4969C4D1D1AA084008B3451 /* AppDelegate.swift */,
 				B4969C531D1AA084008B3451 /* GameViewController.swift */,
@@ -73,7 +74,6 @@
 				B4969C651D1AAF91008B3451 /* TileMap.swift */,
 				B4969C671D1AEBF5008B3451 /* Scene.swift */,
 				B4969C691D1B1A24008B3451 /* Controls.swift */,
-				B421655F1D1BDC1500FA8F8B /* Assets.xcassets */,
 				B48943331D1F6F4F007DEE23 /* GameOverScene.swift */,
 			);
 			path = SimpleLabirynth;

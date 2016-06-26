@@ -139,11 +139,14 @@ SWIFT_CLASS("_TtC15SimpleLabirynth8Controls")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITouch;
+@class UIEvent;
 
 SWIFT_CLASS("_TtC15SimpleLabirynth13GameOverScene")
 @interface GameOverScene : SKScene
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 @end
 
 @class NSBundle;
@@ -160,14 +163,13 @@ SWIFT_CLASS("_TtC15SimpleLabirynth18GameViewController")
 @end
 
 @class TileMap;
-@class UITouch;
-@class UIEvent;
 
 SWIFT_CLASS("_TtC15SimpleLabirynth5Scene")
 @interface Scene : SKScene
 @property (nonatomic, strong) TileMap * _Null_unspecified tileMap;
 @property (nonatomic, readonly) CGSize tileSize;
 @property (nonatomic, readonly) CGSize mapSize;
+@property (nonatomic, readonly) CGSize controllButtonSize;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonUp;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonDown;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonRight;

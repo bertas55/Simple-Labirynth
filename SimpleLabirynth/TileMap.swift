@@ -21,6 +21,22 @@ enum TileType {
         case .Path: return "path"
         }
     }
+
+    var color: SKColor {
+        switch self {
+        //case .Wall: return SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
+        case .Wall: return SKColor(red: 46/255, green: 48/255, blue: 61/255, alpha: 1)
+        case .Ground: return SKColor(red: 61/255, green: 62/255, blue: 84/255, alpha: 1)
+        default: return SKColor(red: 1, green: 1, blue: 1, alpha: 1)
+        //case .Ground: return "ground"
+        //case .Player: return "player"
+        //case .Path: return "path"
+        }
+    }
+
+    var size: CGSize {
+        return CGSize(width: 18, height: 18)
+    }
 }
 
 struct Stack<Element> {
@@ -61,9 +77,9 @@ class Tile : SKSpriteNode {
         self.type = type
         self.coord = coord
 
-        let texture = SKTexture(imageNamed: type.name)
+        //var texture = SKTexture(imageNamed: type.name)
 
-        super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
+        super.init(texture: nil, color: type.color, size: type.size)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -224,7 +240,7 @@ class TileMap : SKNode {
             if neighbours.isEmpty {
                 cell = walls.pop()
             } else {
-walls.push(cell)
+                walls.push(cell)
                 let randomNeighbour = Int(arc4random_uniform(UInt32(neighbours.count)))
 
                 cell = neighbours[randomNeighbour]
@@ -235,60 +251,6 @@ walls.push(cell)
             tiles[cell.y][cell.x] = setTile(TileType.Ground, coord: CGPoint(x: cell.x, y: cell.y))
         } while !walls.isEmpty()
     }
-
-
-    /*
-
-    private func carve2(x: Int, y: Int) {
-        var walls = Stack<(x: Int, y: Int)>()
-        var cell = (x: x, y: y)
-        let directions = [Direction.Left, Direction.Down, Direction.Right, Direction.Up]
-
-        //tiles[y][x] = setTile(TileType.Ground, coord: CGPoint(x: x, y: y))
-        walls.push((x: x, y: y))
-
-        repeat {
-            // If the current cell has any neighbours which have not been visited
-            var neighbours = [(Int, Int)]()
-
-
-            for i in 0..<directions.count {
-                let dir = directions[i]
-                let x = cell.x + dir.dx
-                let y = cell.y + dir.dy
-
-                var otherDirs = directions
-                otherDirs.removeAtIndex(i)
-
-                let a = tiles[y + otherDirs[0].dy][x + otherDirs[0].dx]?.type
-                let b = tiles[y + otherDirs[1].dy][x + otherDirs[1].dx]?.type
-                let c = tiles[y + otherDirs[2].dy][x + otherDirs[2].dx]?.type
-
-                if 1...Int(self.mapSize.width - 2) ~= x
-                    && 1...Int(self.mapSize.height - 2) ~= y
-                    && tiles[y][x]?.type == TileType.Wall
-                    && tiles[y + otherDirs[0].dy][x + otherDirs[0].dx]?.type == TileType.Wall
-                    && tiles[y + otherDirs[1].dy][x + otherDirs[1].dx]?.type == TileType.Wall
-                    && tiles[y + otherDirs[2].dy][x + otherDirs[2].dx]?.type == TileType.Wall {
-                    neighbours.append((x, y))
-                }
-            }
-
-            if neighbours.isEmpty {
-                cell = walls.pop()
-            } else {
-
-                let randomNeighbour = Int(arc4random_uniform(UInt32(neighbours.count)))
-
-                cell = neighbours[randomNeighbour]
-                                walls.push(cell)
-
-            }
-
-            tiles[cell.y][cell.x] = setTile(TileType.Ground, coord: CGPoint(x: cell.x, y: cell.y))
-        } while !walls.isEmpty()
-    }
-*/
 
     func findShortestPathToExit(playerCoords: (x: Int, y: Int), exitCoords: (x: Int, y: Int)) -> [(x: Int, y: Int)] {
         var path = [(x: Int, y: Int)]()

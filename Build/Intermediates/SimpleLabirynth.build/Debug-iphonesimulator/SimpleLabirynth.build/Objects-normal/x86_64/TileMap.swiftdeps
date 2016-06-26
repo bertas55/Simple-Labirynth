@@ -18,53 +18,52 @@ provides-member:
 - ["C15SimpleLabirynth4Tile", ""]
 - ["C15SimpleLabirynth7TileMap", ""]
 provides-dynamic-lookup:
-- "mapSize"
-- "tilePositionForCoord"
-- "tileLayer"
-- "exitCoords"
 - "tileCoordForPosition"
-- "tileSize"
+- "mapSize"
+- "tileLayer"
 - "player"
 - "createMap"
 - "coord"
+- "tileSize"
+- "exitCoords"
+- "tilePositionForCoord"
 depends-top-level:
-- "Bool"
-- !private "UIColor"
-- !private "StringLiteralType"
-- !private "..<"
-- !private "!"
-- !private "!="
+- !private "~="
+- "SKNode"
+- "Stack"
 - "SKSpriteNode"
-- "Tile"
+- !private "print"
 - !private "+"
 - !private "*"
-- "NSCoder"
-- "CGSize"
-- "String"
-- "TileType"
-- !private "&&"
-- !private "%"
-- !private "print"
-- "TileMap"
-- "=="
-- !private "~="
-- !private "/"
-- !private "..."
-- "Queue"
-- "Stack"
-- "Int"
-- !private "+="
-- "Array"
-- !private "-"
 - !private "BooleanLiteralType"
-- !private "UInt32"
-- !private "arc4random_uniform"
+- "CGSize"
+- "Tile"
+- "Bool"
+- "SKColor"
+- "TileMap"
 - !private "fatalError"
+- !private "%"
+- !private "..<"
+- !private "&&"
+- "TileType"
+- "Array"
 - "CGPoint"
-- !private "Direction"
+- "Int"
+- !private "UInt32"
+- "String"
 - !private "<"
-- "SKNode"
-- !private "SKTexture"
+- !private "!="
+- !private "arc4random_uniform"
+- !private "StringLiteralType"
+- "Queue"
+- !private "..."
+- !private "Direction"
+- !private "/"
+- !private "+="
+- !private "!"
+- "NSCoder"
+- "=="
+- !private "-"
 depends-member:
 - ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "CGPoint"]
@@ -72,17 +71,14 @@ depends-member:
 - !private ["Ps9AnyObject", "Int"]
 - !private ["Ps9AnyObject", "Queue"]
 - ["Ps9AnyObject", "SKNode"]
-- !private ["Ps9AnyObject", "SKTexture"]
 - !private ["Ps9AnyObject", "Stack"]
 - !private ["Ps9AnyObject", "Tile"]
 - !private ["Ps9AnyObject", "TileType"]
-- !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UInt32"]
 - !private ["Ps9AnyObject", "addChild"]
 - !private ["Ps9AnyObject", "arc4random_uniform"]
 - ["Ps9AnyObject", "carve"]
 - ["Ps9AnyObject", "carve2"]
-- !private ["Ps9AnyObject", "clearColor"]
 - !private ["Ps9AnyObject", "convertPoint"]
 - ["Ps9AnyObject", "coord"]
 - ["Ps9AnyObject", "createMap"]
@@ -95,7 +91,6 @@ depends-member:
 - !private ["Ps9AnyObject", "position"]
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "setTile"]
-- !private ["Ps9AnyObject", "size"]
 - ["Ps9AnyObject", "tileCoordForPosition"]
 - ["Ps9AnyObject", "tileLayer"]
 - ["Ps9AnyObject", "tilePositionForCoord"]
@@ -154,6 +149,7 @@ depends-member:
 - !private ["VSC7CGPoint", "x"]
 - !private ["VSC7CGPoint", "y"]
 - !private ["VSC6CGSize", "height"]
+- !private ["VSC6CGSize", "init"]
 - !private ["VSC6CGSize", "width"]
 - ["Ps11CVarArgType", "Array"]
 - !private ["Ps11CVarArgType", "CGPoint"]
@@ -163,19 +159,16 @@ depends-member:
 - ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "Queue"]
 - ["Ps11CVarArgType", "SKNode"]
-- !private ["Ps11CVarArgType", "SKTexture"]
 - !private ["Ps11CVarArgType", "Stack"]
 - !private ["Ps11CVarArgType", "Stride"]
 - !private ["Ps11CVarArgType", "Tile"]
 - !private ["Ps11CVarArgType", "TileType"]
-- !private ["Ps11CVarArgType", "UIColor"]
 - !private ["Ps11CVarArgType", "UInt32"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "addChild"]
 - !private ["Ps11CVarArgType", "arc4random_uniform"]
 - ["Ps11CVarArgType", "carve"]
 - ["Ps11CVarArgType", "carve2"]
-- !private ["Ps11CVarArgType", "clearColor"]
 - !private ["Ps11CVarArgType", "convertPoint"]
 - ["Ps11CVarArgType", "coord"]
 - ["Ps11CVarArgType", "createMap"]
@@ -189,7 +182,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "position"]
 - !private ["Ps11CVarArgType", "print"]
 - ["Ps11CVarArgType", "setTile"]
-- !private ["Ps11CVarArgType", "size"]
 - ["Ps11CVarArgType", "tileCoordForPosition"]
 - ["Ps11CVarArgType", "tileLayer"]
 - ["Ps11CVarArgType", "tilePositionForCoord"]
@@ -230,12 +222,10 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Int"]
 - !private ["Ps28CustomDebugStringConvertible", "Queue"]
 - ["Ps28CustomDebugStringConvertible", "SKNode"]
-- !private ["Ps28CustomDebugStringConvertible", "SKTexture"]
 - !private ["Ps28CustomDebugStringConvertible", "Stack"]
 - ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "Tile"]
 - !private ["Ps28CustomDebugStringConvertible", "TileType"]
-- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UInt32"]
 - ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addChild"]
@@ -243,7 +233,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "arc4random_uniform"]
 - ["Ps28CustomDebugStringConvertible", "carve"]
 - ["Ps28CustomDebugStringConvertible", "carve2"]
-- !private ["Ps28CustomDebugStringConvertible", "clearColor"]
 - !private ["Ps28CustomDebugStringConvertible", "convertPoint"]
 - ["Ps28CustomDebugStringConvertible", "coord"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
@@ -261,7 +250,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "removeLast"]
 - !private ["Ps28CustomDebugStringConvertible", "reverse"]
 - ["Ps28CustomDebugStringConvertible", "setTile"]
-- !private ["Ps28CustomDebugStringConvertible", "size"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tileCoordForPosition"]
 - ["Ps28CustomDebugStringConvertible", "tileLayer"]
@@ -282,13 +270,11 @@ depends-member:
 - ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Queue"]
 - ["Ps23CustomStringConvertible", "SKNode"]
-- !private ["Ps23CustomStringConvertible", "SKTexture"]
 - !private ["Ps23CustomStringConvertible", "Stack"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Tile"]
 - !private ["Ps23CustomStringConvertible", "TileType"]
-- !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UInt32"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - ["Ps23CustomStringConvertible", "_Element"]
@@ -298,7 +284,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "arc4random_uniform"]
 - ["Ps23CustomStringConvertible", "carve"]
 - ["Ps23CustomStringConvertible", "carve2"]
-- !private ["Ps23CustomStringConvertible", "clearColor"]
 - !private ["Ps23CustomStringConvertible", "convertPoint"]
 - ["Ps23CustomStringConvertible", "coord"]
 - !private ["Ps23CustomStringConvertible", "count"]
@@ -317,7 +302,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "removeLast"]
 - !private ["Ps23CustomStringConvertible", "reverse"]
 - ["Ps23CustomStringConvertible", "setTile"]
-- !private ["Ps23CustomStringConvertible", "size"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tileCoordForPosition"]
 - ["Ps23CustomStringConvertible", "tileLayer"]
@@ -335,6 +319,7 @@ depends-member:
 - ["Ps9Equatable", "Array"]
 - !private ["Ps9Equatable", "Bound"]
 - !private ["Ps9Equatable", "CGPoint"]
+- !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "Direction"]
 - ["Ps9Equatable", "Distance"]
 - !private ["Ps9Equatable", "Down"]
@@ -347,13 +332,12 @@ depends-member:
 - ["Ps9Equatable", "Player"]
 - !private ["Ps9Equatable", "Queue"]
 - !private ["Ps9Equatable", "Right"]
+- !private ["Ps9Equatable", "SKColor"]
 - ["Ps9Equatable", "SKNode"]
-- !private ["Ps9Equatable", "SKTexture"]
 - !private ["Ps9Equatable", "Stack"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "Tile"]
 - !private ["Ps9Equatable", "TileType"]
-- !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UInt32"]
 - !private ["Ps9Equatable", "Up"]
 - ["Ps9Equatable", "Wall"]
@@ -363,7 +347,7 @@ depends-member:
 - !private ["Ps9Equatable", "arc4random_uniform"]
 - ["Ps9Equatable", "carve"]
 - ["Ps9Equatable", "carve2"]
-- !private ["Ps9Equatable", "clearColor"]
+- !private ["Ps9Equatable", "color"]
 - !private ["Ps9Equatable", "convertPoint"]
 - ["Ps9Equatable", "coord"]
 - ["Ps9Equatable", "createMap"]
@@ -376,7 +360,6 @@ depends-member:
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "mapSize"]
-- !private ["Ps9Equatable", "name"]
 - ["Ps9Equatable", "player"]
 - !private ["Ps9Equatable", "position"]
 - !private ["Ps9Equatable", "print"]
@@ -403,6 +386,7 @@ depends-member:
 - !private ["Vs16HalfOpenInterval", "deinit"]
 - ["Ps8Hashable", "Array"]
 - !private ["Ps8Hashable", "CGPoint"]
+- !private ["Ps8Hashable", "CGSize"]
 - !private ["Ps8Hashable", "Direction"]
 - ["Ps8Hashable", "Distance"]
 - !private ["Ps8Hashable", "Down"]
@@ -414,13 +398,12 @@ depends-member:
 - ["Ps8Hashable", "Player"]
 - !private ["Ps8Hashable", "Queue"]
 - !private ["Ps8Hashable", "Right"]
+- !private ["Ps8Hashable", "SKColor"]
 - ["Ps8Hashable", "SKNode"]
-- !private ["Ps8Hashable", "SKTexture"]
 - !private ["Ps8Hashable", "Stack"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "Tile"]
 - !private ["Ps8Hashable", "TileType"]
-- !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UInt32"]
 - !private ["Ps8Hashable", "Up"]
 - ["Ps8Hashable", "Wall"]
@@ -430,7 +413,7 @@ depends-member:
 - !private ["Ps8Hashable", "arc4random_uniform"]
 - ["Ps8Hashable", "carve"]
 - ["Ps8Hashable", "carve2"]
-- !private ["Ps8Hashable", "clearColor"]
+- !private ["Ps8Hashable", "color"]
 - !private ["Ps8Hashable", "convertPoint"]
 - ["Ps8Hashable", "coord"]
 - ["Ps8Hashable", "createMap"]
@@ -442,7 +425,6 @@ depends-member:
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "mapSize"]
-- !private ["Ps8Hashable", "name"]
 - ["Ps8Hashable", "player"]
 - !private ["Ps8Hashable", "position"]
 - !private ["Ps8Hashable", "print"]
@@ -548,17 +530,14 @@ depends-member:
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "Queue"]
 - ["PSo8NSCoding", "SKNode"]
-- !private ["PSo8NSCoding", "SKTexture"]
 - !private ["PSo8NSCoding", "Stack"]
 - !private ["PSo8NSCoding", "Tile"]
 - !private ["PSo8NSCoding", "TileType"]
-- !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UInt32"]
 - !private ["PSo8NSCoding", "addChild"]
 - !private ["PSo8NSCoding", "arc4random_uniform"]
 - ["PSo8NSCoding", "carve"]
 - ["PSo8NSCoding", "carve2"]
-- !private ["PSo8NSCoding", "clearColor"]
 - !private ["PSo8NSCoding", "convertPoint"]
 - ["PSo8NSCoding", "coord"]
 - ["PSo8NSCoding", "createMap"]
@@ -571,7 +550,6 @@ depends-member:
 - !private ["PSo8NSCoding", "position"]
 - !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "setTile"]
-- !private ["PSo8NSCoding", "size"]
 - ["PSo8NSCoding", "tileCoordForPosition"]
 - ["PSo8NSCoding", "tileLayer"]
 - ["PSo8NSCoding", "tilePositionForCoord"]
@@ -585,17 +563,14 @@ depends-member:
 - !private ["PSo9NSCopying", "Int"]
 - !private ["PSo9NSCopying", "Queue"]
 - ["PSo9NSCopying", "SKNode"]
-- !private ["PSo9NSCopying", "SKTexture"]
 - !private ["PSo9NSCopying", "Stack"]
 - !private ["PSo9NSCopying", "Tile"]
 - !private ["PSo9NSCopying", "TileType"]
-- !private ["PSo9NSCopying", "UIColor"]
 - !private ["PSo9NSCopying", "UInt32"]
 - !private ["PSo9NSCopying", "addChild"]
 - !private ["PSo9NSCopying", "arc4random_uniform"]
 - ["PSo9NSCopying", "carve"]
 - ["PSo9NSCopying", "carve2"]
-- !private ["PSo9NSCopying", "clearColor"]
 - !private ["PSo9NSCopying", "convertPoint"]
 - ["PSo9NSCopying", "coord"]
 - ["PSo9NSCopying", "createMap"]
@@ -608,7 +583,6 @@ depends-member:
 - !private ["PSo9NSCopying", "position"]
 - !private ["PSo9NSCopying", "print"]
 - ["PSo9NSCopying", "setTile"]
-- !private ["PSo9NSCopying", "size"]
 - ["PSo9NSCopying", "tileCoordForPosition"]
 - ["PSo9NSCopying", "tileLayer"]
 - ["PSo9NSCopying", "tilePositionForCoord"]
@@ -624,17 +598,14 @@ depends-member:
 - ["CSo8NSObject", "NSCoder"]
 - !private ["CSo8NSObject", "Queue"]
 - ["CSo8NSObject", "SKNode"]
-- !private ["CSo8NSObject", "SKTexture"]
 - !private ["CSo8NSObject", "Stack"]
 - ["CSo8NSObject", "Tile"]
 - ["CSo8NSObject", "TileType"]
-- !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UInt32"]
 - !private ["CSo8NSObject", "addChild"]
 - !private ["CSo8NSObject", "arc4random_uniform"]
 - ["CSo8NSObject", "carve"]
 - ["CSo8NSObject", "carve2"]
-- !private ["CSo8NSObject", "clearColor"]
 - !private ["CSo8NSObject", "convertPoint"]
 - ["CSo8NSObject", "coord"]
 - ["CSo8NSObject", "createMap"]
@@ -647,7 +618,6 @@ depends-member:
 - !private ["CSo8NSObject", "position"]
 - !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "setTile"]
-- !private ["CSo8NSObject", "size"]
 - ["CSo8NSObject", "tileCoordForPosition"]
 - ["CSo8NSObject", "tileLayer"]
 - ["CSo8NSObject", "tilePositionForCoord"]
@@ -660,17 +630,14 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Int"]
 - !private ["PSo16NSObjectProtocol", "Queue"]
 - ["PSo16NSObjectProtocol", "SKNode"]
-- !private ["PSo16NSObjectProtocol", "SKTexture"]
 - !private ["PSo16NSObjectProtocol", "Stack"]
 - !private ["PSo16NSObjectProtocol", "Tile"]
 - !private ["PSo16NSObjectProtocol", "TileType"]
-- !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UInt32"]
 - !private ["PSo16NSObjectProtocol", "addChild"]
 - !private ["PSo16NSObjectProtocol", "arc4random_uniform"]
 - ["PSo16NSObjectProtocol", "carve"]
 - ["PSo16NSObjectProtocol", "carve2"]
-- !private ["PSo16NSObjectProtocol", "clearColor"]
 - !private ["PSo16NSObjectProtocol", "convertPoint"]
 - ["PSo16NSObjectProtocol", "coord"]
 - ["PSo16NSObjectProtocol", "createMap"]
@@ -683,7 +650,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "position"]
 - !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "setTile"]
-- !private ["PSo16NSObjectProtocol", "size"]
 - ["PSo16NSObjectProtocol", "tileCoordForPosition"]
 - ["PSo16NSObjectProtocol", "tileLayer"]
 - ["PSo16NSObjectProtocol", "tilePositionForCoord"]
@@ -691,7 +657,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "tiles"]
 - ["PSo16NSObjectProtocol", "type"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "clearColor"]
+- !private ["PSo14NSSecureCoding", "init"]
 - !private ["Ps21NilLiteralConvertible", "Distance"]
 - !private ["Sq", "Distance"]
 - !private ["Sq", "deinit"]
@@ -738,11 +704,9 @@ depends-member:
 - ["CSo6SKNode", "NSCoder"]
 - !private ["CSo6SKNode", "Queue"]
 - ["CSo6SKNode", "SKNode"]
-- !private ["CSo6SKNode", "SKTexture"]
 - !private ["CSo6SKNode", "Stack"]
 - ["CSo6SKNode", "Tile"]
 - ["CSo6SKNode", "TileType"]
-- !private ["CSo6SKNode", "UIColor"]
 - !private ["CSo6SKNode", "UInt32"]
 - !private ["CSo6SKNode", "addChild"]
 - !private ["CSo6SKNode", "arc4random_uniform"]
@@ -769,17 +733,13 @@ depends-member:
 - ["CSo6SKNode", ""]
 - ["CSo12SKSpriteNode", "CGPoint"]
 - ["CSo12SKSpriteNode", "NSCoder"]
-- !private ["CSo12SKSpriteNode", "SKTexture"]
 - ["CSo12SKSpriteNode", "TileType"]
-- !private ["CSo12SKSpriteNode", "UIColor"]
 - ["CSo12SKSpriteNode", "coord"]
 - !private ["CSo12SKSpriteNode", "fatalError"]
 - ["CSo12SKSpriteNode", "init"]
 - !private ["CSo12SKSpriteNode", "position"]
 - ["CSo12SKSpriteNode", "type"]
 - ["CSo12SKSpriteNode", ""]
-- !private ["CSo9SKTexture", "init"]
-- !private ["CSo9SKTexture", "size"]
 - ["Ps12SequenceType", "Element"]
 - ["Ps12SequenceType", "Generator"]
 - ["Ps12SequenceType", "Index"]
@@ -825,9 +785,7 @@ depends-member:
 - !private ["Ps10Strideable", "init"]
 - ["C15SimpleLabirynth4Tile", "CGPoint"]
 - ["C15SimpleLabirynth4Tile", "NSCoder"]
-- !private ["C15SimpleLabirynth4Tile", "SKTexture"]
 - ["C15SimpleLabirynth4Tile", "TileType"]
-- !private ["C15SimpleLabirynth4Tile", "UIColor"]
 - ["C15SimpleLabirynth4Tile", "coord"]
 - ["C15SimpleLabirynth4Tile", "deinit"]
 - !private ["C15SimpleLabirynth4Tile", "fatalError"]
@@ -866,15 +824,19 @@ depends-member:
 - ["C15SimpleLabirynth7TileMap", "tilePositionForCoord"]
 - ["C15SimpleLabirynth7TileMap", "tileSize"]
 - ["C15SimpleLabirynth7TileMap", "tiles"]
+- ["O15SimpleLabirynth8TileType", "CGSize"]
 - ["O15SimpleLabirynth8TileType", "Ground"]
 - ["O15SimpleLabirynth8TileType", "Path"]
 - ["O15SimpleLabirynth8TileType", "Player"]
+- ["O15SimpleLabirynth8TileType", "SKColor"]
 - ["O15SimpleLabirynth8TileType", "String"]
 - ["O15SimpleLabirynth8TileType", "Wall"]
+- ["O15SimpleLabirynth8TileType", "color"]
 - ["O15SimpleLabirynth8TileType", "deinit"]
 - ["O15SimpleLabirynth8TileType", "hashValue"]
 - ["O15SimpleLabirynth8TileType", "name"]
-- !private ["CSo7UIColor", "clearColor"]
+- ["O15SimpleLabirynth8TileType", "size"]
+- !private ["CSo7UIColor", "init"]
 - ["CSo11UIResponder", "Array"]
 - ["CSo11UIResponder", "CGPoint"]
 - ["CSo11UIResponder", "CGSize"]
@@ -883,11 +845,9 @@ depends-member:
 - ["CSo11UIResponder", "NSCoder"]
 - !private ["CSo11UIResponder", "Queue"]
 - ["CSo11UIResponder", "SKNode"]
-- !private ["CSo11UIResponder", "SKTexture"]
 - !private ["CSo11UIResponder", "Stack"]
 - ["CSo11UIResponder", "Tile"]
 - ["CSo11UIResponder", "TileType"]
-- !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UInt32"]
 - !private ["CSo11UIResponder", "addChild"]
 - !private ["CSo11UIResponder", "arc4random_uniform"]
@@ -933,7 +893,7 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
-- !private ["Ps24_ColorLiteralConvertible", "clearColor"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - ["Ps24_DestructorSafeContainer", "Generator"]
 - ["Ps24_DestructorSafeContainer", "Index"]
@@ -997,10 +957,8 @@ depends-member:
 - ["Ps12_Reflectable", "Generator"]
 - ["Ps12_Reflectable", "Index"]
 - ["Ps12_Reflectable", "IntegerLiteralType"]
-- !private ["Ps12_Reflectable", "SKTexture"]
 - !private ["Ps12_Reflectable", "Stride"]
 - ["Ps12_Reflectable", "SubSequence"]
-- !private ["Ps12_Reflectable", "UIColor"]
 - !private ["Ps12_Reflectable", "_DisabledRangeIndex"]
 - ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
@@ -1016,7 +974,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "position"]
 - !private ["Ps12_Reflectable", "removeLast"]
 - !private ["Ps12_Reflectable", "reverse"]
-- !private ["Ps12_Reflectable", "size"]
 - !private ["Ps12_Reflectable", "subscript"]
 - ["Ps12_Reflectable", "type"]
 - !private ["Ps12_Reflectable", "width"]
@@ -1081,7 +1038,6 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - "CSo6SKNode"
 - "CSo12SKSpriteNode"
-- !private "CSo9SKTexture"
 - "Ps12SequenceType"
 - "Ps17SignedIntegerType"
 - "Ps16SignedNumberType"
@@ -1122,4 +1078,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "d4ec9514da0f1f016ed60468d0e7f2d0"
+interface-hash: "38e61ebc801c6725d3dac0fed51a0350"

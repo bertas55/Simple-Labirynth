@@ -10,14 +10,14 @@ provides-member:
 - ["C15SimpleLabirynth11MazeBuilder", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Int"
-- "MazeBuilder"
 - "FloatLiteralType"
-- "Direction"
-- "TileMap"
 - !private "arc4random_uniform"
-- "IntegerLiteralType"
+- "Int"
+- "TileMap"
 - !private "CGSize"
+- "Direction"
+- "MazeBuilder"
+- "IntegerLiteralType"
 - !private "~="
 - "=="
 depends-member:

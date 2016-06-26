@@ -13,6 +13,7 @@ class Scene: SKScene {
     var tileMap: TileMap!
     let tileSize: CGSize
     let mapSize: CGSize
+    let controllButtonSize: CGSize
 
     var buttonUp: SKSpriteNode?
     var buttonDown: SKSpriteNode?
@@ -23,14 +24,15 @@ class Scene: SKScene {
 
     override init(size: CGSize) {
 
-        self.tileSize = CGSize(width: 23, height: 23)
-        self.mapSize = CGSize(width: 18, height: 27)
-
-
+        self.tileSize = CGSize(width: 18, height: 18)
+        self.mapSize = CGSize(width: 23, height: 29)
+        self.controllButtonSize = CGSize(width: 58, height: 58)
 
         super.init(size: size)
 
         self.tileMap = TileMap(mapSize: mapSize, tileSize: tileSize)
+
+        backgroundColor = SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
 
         tileMap.position = CGPoint(x: 0, y: 5 * tileSize.height)
         addChild(tileMap)
@@ -38,9 +40,6 @@ class Scene: SKScene {
         createPlayer()
 
         setupButtons()
-
-
-
 
 
     }
@@ -169,35 +168,35 @@ class Scene: SKScene {
     func setupButtons() {
 
         self.buttonUp = SKSpriteNode(imageNamed: "buttonUp")
-        self.buttonUp!.position = CGPointMake(CGRectGetMidX(self.frame), 64)
+        self.buttonUp!.position = CGPointMake(self.controllButtonSize.width / 2 + 15, self.controllButtonSize.height * 1.5)
         self.buttonUp!.name = "buttonUp"
         self.buttonUp!.zPosition = 10
 
         self.addChild(self.buttonUp!)
 
         self.buttonDown = SKSpriteNode(imageNamed: "buttonDown")
-        self.buttonDown!.position = CGPointMake(CGRectGetMidX(self.frame), 10)
+        self.buttonDown!.position = CGPointMake(self.controllButtonSize.width / 2 + 15, self.controllButtonSize.height / 2)
         self.buttonDown!.name = "buttonDown"
         self.buttonDown!.zPosition = 10
 
         self.addChild(self.buttonDown!)
 
         self.buttonRight = SKSpriteNode(imageNamed: "buttonRight")
-        self.buttonRight!.position = CGPointMake(CGRectGetMidX(self.frame) + 64, 16)
+        self.buttonRight!.position = CGPointMake(CGRectGetMaxX(self.frame) - self.controllButtonSize.width / 2, self.controllButtonSize.height)
         self.buttonRight!.name = "buttonRight"
         self.buttonRight!.zPosition = 10
 
         self.addChild(self.buttonRight!)
 
         self.buttonLeft = SKSpriteNode(imageNamed: "buttonLeft")
-        self.buttonLeft!.position = CGPointMake(CGRectGetMidX(self.frame) - 64, 16)
+        self.buttonLeft!.position = CGPointMake(CGRectGetMaxX(self.frame) - self.controllButtonSize.width * 1.5, self.controllButtonSize.height)
         self.buttonLeft!.name = "buttonLeft"
         self.buttonLeft!.zPosition = 10
 
         self.addChild(self.buttonLeft!)
 
         self.buttonCheat = SKSpriteNode(imageNamed: "buttonCheat")
-        self.buttonCheat!.position = CGPointMake(CGRectGetMidX(self.frame) + 100, 16)
+        self.buttonCheat!.position = CGPointMake(CGRectGetMidX(self.frame), self.controllButtonSize.height)
         self.buttonCheat!.name = "buttonCheat"
         self.buttonCheat!.zPosition = 10
 

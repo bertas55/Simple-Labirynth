@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "98A8756D5771BED04DE11BB0874BE6F6222AAD7C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3A5A3B44117C602D32F96E5F2E277E8EC40EF2E4" : 0,
+    "98A8756D5771BED04DE11BB0874BE6F6222AAD7C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6A664403-87A5-4196-9DDA-B213CE62D98D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3A5A3B44117C602D32F96E5F2E277E8EC40EF2E4" : "",
+    "98A8756D5771BED04DE11BB0874BE6F6222AAD7C" : "SimpleLabirynth\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SimpleLabirynth",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SimpleLabirynth.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:bertas55\/iOS-Learning-ObjC-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A5A3B44117C602D32F96E5F2E277E8EC40EF2E4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:bertas55\/simplelabirynthios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "98A8756D5771BED04DE11BB0874BE6F6222AAD7C"
+    }
+  ]
+}

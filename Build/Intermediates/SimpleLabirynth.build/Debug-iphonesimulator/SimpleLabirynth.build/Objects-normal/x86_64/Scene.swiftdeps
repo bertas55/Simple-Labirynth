@@ -6,66 +6,71 @@ provides-nominal:
 provides-member:
 - ["C15SimpleLabirynth5Scene", ""]
 provides-dynamic-lookup:
-- "buttonRight"
-- "touchesBegan"
-- "mapSize"
-- "setupButtons"
 - "tileSize"
-- "buttonUp"
-- "buttonLeft"
-- "isCollision"
 - "tileMap"
+- "buttonLeft"
+- "buttonUp"
+- "touchesEnded"
 - "buttonCheat"
 - "buttonDown"
-- "touchesEnded"
+- "touchesBegan"
+- "isCollision"
+- "setupButtons"
+- "buttonRight"
+- "controllButtonSize"
+- "mapSize"
 depends-top-level:
-- !private "Int64"
-- !private "Array"
-- "NSCoder"
-- !private "StringLiteralType"
-- !private "DISPATCH_TIME_NOW"
-- "TileMap"
-- "UITouch"
-- !private "dispatch_get_global_queue"
-- !private "fatalError"
-- "CGSize"
-- !private "CGPointMake"
-- !private "!"
-- !private "CGVector"
-- !private "TileType"
-- !private "=="
-- "Scene"
-- "Bool"
-- !private "Double"
-- !private "UnicodeScalarType"
-- "CGPoint"
-- !private "SKAction"
 - "Direction"
-- !private "dispatch_get_main_queue"
-- !private "*"
-- !private "print"
-- !private "NSEC_PER_SEC"
-- !private "+"
-- !private "dispatch_after"
-- !private "BooleanLiteralType"
-- "UIEvent"
-- "SKSpriteNode"
-- !private "Tile"
-- !private "CGRectGetMidX"
-- !private "-"
-- !private "GameOverScene"
-- !private "CGRectGetMidY"
-- !private "Int"
-- !private "..<"
+- "CGPoint"
 - "SKScene"
+- !private "CGRectGetMidY"
+- !private "-"
+- !private "Array"
+- "UITouch"
+- !private "BooleanLiteralType"
+- !private "DISPATCH_TIME_NOW"
+- !private "TileType"
+- !private "Int64"
+- !private "dispatch_get_global_queue"
+- !private "GameOverScene"
+- !private "Int"
+- !private "SKColor"
+- !private "CGRectGetMidX"
+- !private "CGVector"
+- !private "Double"
+- !private "CGPointMake"
+- !private "UnicodeScalarType"
 - "Set"
+- !private "*"
+- "NSCoder"
+- !private "SKAction"
+- "TileMap"
+- !private "/"
+- !private "dispatch_get_main_queue"
+- !private "+"
+- "SKSpriteNode"
+- !private "NSEC_PER_SEC"
+- !private "!"
+- !private "..<"
+- !private "StringLiteralType"
+- !private "print"
+- !private "Tile"
+- "UIEvent"
+- !private "fatalError"
+- "Bool"
+- !private "dispatch_after"
 - !private "dispatch_time"
 - !private "QOS_CLASS_BACKGROUND"
+- "CGSize"
+- !private "CGRectGetMaxX"
+- "Scene"
+- !private "=="
 depends-member:
 - !private ["Ps16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "CGPoint"]
 - !private ["Ps9AnyObject", "CGPointMake"]
+- !private ["Ps9AnyObject", "CGRectGetMaxX"]
 - !private ["Ps9AnyObject", "CGRectGetMidX"]
 - !private ["Ps9AnyObject", "CGRectGetMidY"]
 - !private ["Ps9AnyObject", "CGSize"]
@@ -79,17 +84,20 @@ depends-member:
 - !private ["Ps9AnyObject", "NSEC_PER_SEC"]
 - !private ["Ps9AnyObject", "QOS_CLASS_BACKGROUND"]
 - !private ["Ps9AnyObject", "SKAction"]
+- !private ["Ps9AnyObject", "SKColor"]
 - !private ["Ps9AnyObject", "SKSpriteNode"]
 - !private ["Ps9AnyObject", "Tile"]
 - !private ["Ps9AnyObject", "TileMap"]
 - !private ["Ps9AnyObject", "TileType"]
 - !private ["Ps9AnyObject", "addChild"]
+- !private ["Ps9AnyObject", "backgroundColor"]
 - ["Ps9AnyObject", "buttonCheat"]
 - ["Ps9AnyObject", "buttonDown"]
 - ["Ps9AnyObject", "buttonLeft"]
 - ["Ps9AnyObject", "buttonRight"]
 - ["Ps9AnyObject", "buttonUp"]
 - !private ["Ps9AnyObject", "containsPoint"]
+- ["Ps9AnyObject", "controllButtonSize"]
 - !private ["Ps9AnyObject", "convertPointFromView"]
 - !private ["Ps9AnyObject", "coord"]
 - ["Ps9AnyObject", "createPlayer"]
@@ -169,6 +177,7 @@ depends-member:
 - !private ["VSC8CGVector", "init"]
 - !private ["Ps11CVarArgType", "CGPoint"]
 - !private ["Ps11CVarArgType", "CGPointMake"]
+- !private ["Ps11CVarArgType", "CGRectGetMaxX"]
 - !private ["Ps11CVarArgType", "CGRectGetMidX"]
 - !private ["Ps11CVarArgType", "CGRectGetMidY"]
 - !private ["Ps11CVarArgType", "CGSize"]
@@ -184,18 +193,21 @@ depends-member:
 - !private ["Ps11CVarArgType", "NSEC_PER_SEC"]
 - !private ["Ps11CVarArgType", "QOS_CLASS_BACKGROUND"]
 - !private ["Ps11CVarArgType", "SKAction"]
+- !private ["Ps11CVarArgType", "SKColor"]
 - !private ["Ps11CVarArgType", "SKSpriteNode"]
 - !private ["Ps11CVarArgType", "Tile"]
 - !private ["Ps11CVarArgType", "TileMap"]
 - !private ["Ps11CVarArgType", "TileType"]
 - !private ["Ps11CVarArgType", "_DisabledRangeIndex"]
 - !private ["Ps11CVarArgType", "addChild"]
+- !private ["Ps11CVarArgType", "backgroundColor"]
 - ["Ps11CVarArgType", "buttonCheat"]
 - ["Ps11CVarArgType", "buttonDown"]
 - ["Ps11CVarArgType", "buttonLeft"]
 - ["Ps11CVarArgType", "buttonRight"]
 - ["Ps11CVarArgType", "buttonUp"]
 - !private ["Ps11CVarArgType", "containsPoint"]
+- ["Ps11CVarArgType", "controllButtonSize"]
 - !private ["Ps11CVarArgType", "convertPointFromView"]
 - !private ["Ps11CVarArgType", "coord"]
 - ["Ps11CVarArgType", "createPlayer"]
@@ -249,6 +261,7 @@ depends-member:
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPointMake"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRectGetMaxX"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidX"]
 - !private ["Ps28CustomDebugStringConvertible", "CGRectGetMidY"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSize"]
@@ -266,6 +279,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSEC_PER_SEC"]
 - !private ["Ps28CustomDebugStringConvertible", "QOS_CLASS_BACKGROUND"]
 - !private ["Ps28CustomDebugStringConvertible", "SKAction"]
+- !private ["Ps28CustomDebugStringConvertible", "SKColor"]
 - !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
@@ -274,12 +288,14 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "TileType"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addChild"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
 - ["Ps28CustomDebugStringConvertible", "buttonCheat"]
 - ["Ps28CustomDebugStringConvertible", "buttonDown"]
 - ["Ps28CustomDebugStringConvertible", "buttonLeft"]
 - ["Ps28CustomDebugStringConvertible", "buttonRight"]
 - ["Ps28CustomDebugStringConvertible", "buttonUp"]
 - !private ["Ps28CustomDebugStringConvertible", "containsPoint"]
+- ["Ps28CustomDebugStringConvertible", "controllButtonSize"]
 - !private ["Ps28CustomDebugStringConvertible", "convertPointFromView"]
 - !private ["Ps28CustomDebugStringConvertible", "coord"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
@@ -324,6 +340,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "CGPoint"]
 - !private ["Ps23CustomStringConvertible", "CGPointMake"]
+- !private ["Ps23CustomStringConvertible", "CGRectGetMaxX"]
 - !private ["Ps23CustomStringConvertible", "CGRectGetMidX"]
 - !private ["Ps23CustomStringConvertible", "CGRectGetMidY"]
 - !private ["Ps23CustomStringConvertible", "CGSize"]
@@ -342,6 +359,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSEC_PER_SEC"]
 - !private ["Ps23CustomStringConvertible", "QOS_CLASS_BACKGROUND"]
 - !private ["Ps23CustomStringConvertible", "SKAction"]
+- !private ["Ps23CustomStringConvertible", "SKColor"]
 - !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "Tile"]
@@ -351,12 +369,14 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addChild"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
 - ["Ps23CustomStringConvertible", "buttonCheat"]
 - ["Ps23CustomStringConvertible", "buttonDown"]
 - ["Ps23CustomStringConvertible", "buttonLeft"]
 - ["Ps23CustomStringConvertible", "buttonRight"]
 - ["Ps23CustomStringConvertible", "buttonUp"]
 - !private ["Ps23CustomStringConvertible", "containsPoint"]
+- ["Ps23CustomStringConvertible", "controllButtonSize"]
 - !private ["Ps23CustomStringConvertible", "convertPointFromView"]
 - !private ["Ps23CustomStringConvertible", "coord"]
 - !private ["Ps23CustomStringConvertible", "count"]
@@ -414,6 +434,7 @@ depends-member:
 - !private ["Sd", "init"]
 - !private ["Ps9Equatable", "CGPoint"]
 - !private ["Ps9Equatable", "CGPointMake"]
+- !private ["Ps9Equatable", "CGRectGetMaxX"]
 - !private ["Ps9Equatable", "CGRectGetMidX"]
 - !private ["Ps9Equatable", "CGRectGetMidY"]
 - !private ["Ps9Equatable", "CGSize"]
@@ -441,6 +462,7 @@ depends-member:
 - !private ["Ps9Equatable", "RightDown"]
 - !private ["Ps9Equatable", "RightUp"]
 - !private ["Ps9Equatable", "SKAction"]
+- !private ["Ps9Equatable", "SKColor"]
 - !private ["Ps9Equatable", "SKSpriteNode"]
 - !private ["Ps9Equatable", "SubSequence"]
 - !private ["Ps9Equatable", "Tile"]
@@ -452,12 +474,14 @@ depends-member:
 - !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addChild"]
+- !private ["Ps9Equatable", "backgroundColor"]
 - ["Ps9Equatable", "buttonCheat"]
 - ["Ps9Equatable", "buttonDown"]
 - ["Ps9Equatable", "buttonLeft"]
 - ["Ps9Equatable", "buttonRight"]
 - ["Ps9Equatable", "buttonUp"]
 - !private ["Ps9Equatable", "containsPoint"]
+- ["Ps9Equatable", "controllButtonSize"]
 - !private ["Ps9Equatable", "convertPointFromView"]
 - !private ["Ps9Equatable", "coord"]
 - ["Ps9Equatable", "createPlayer"]
@@ -519,6 +543,7 @@ depends-member:
 - !private ["Vs16HalfOpenInterval", "deinit"]
 - !private ["Ps8Hashable", "CGPoint"]
 - !private ["Ps8Hashable", "CGPointMake"]
+- !private ["Ps8Hashable", "CGRectGetMaxX"]
 - !private ["Ps8Hashable", "CGRectGetMidX"]
 - !private ["Ps8Hashable", "CGRectGetMidY"]
 - !private ["Ps8Hashable", "CGSize"]
@@ -546,6 +571,7 @@ depends-member:
 - !private ["Ps8Hashable", "RightDown"]
 - !private ["Ps8Hashable", "RightUp"]
 - !private ["Ps8Hashable", "SKAction"]
+- !private ["Ps8Hashable", "SKColor"]
 - !private ["Ps8Hashable", "SKSpriteNode"]
 - !private ["Ps8Hashable", "SubSequence"]
 - !private ["Ps8Hashable", "Tile"]
@@ -557,12 +583,14 @@ depends-member:
 - !private ["Ps8Hashable", "_Element"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addChild"]
+- !private ["Ps8Hashable", "backgroundColor"]
 - ["Ps8Hashable", "buttonCheat"]
 - ["Ps8Hashable", "buttonDown"]
 - ["Ps8Hashable", "buttonLeft"]
 - ["Ps8Hashable", "buttonRight"]
 - ["Ps8Hashable", "buttonUp"]
 - !private ["Ps8Hashable", "containsPoint"]
+- ["Ps8Hashable", "controllButtonSize"]
 - !private ["Ps8Hashable", "convertPointFromView"]
 - !private ["Ps8Hashable", "coord"]
 - ["Ps8Hashable", "createPlayer"]
@@ -660,6 +688,7 @@ depends-member:
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["PSo8NSCoding", "CGPoint"]
 - !private ["PSo8NSCoding", "CGPointMake"]
+- !private ["PSo8NSCoding", "CGRectGetMaxX"]
 - !private ["PSo8NSCoding", "CGRectGetMidX"]
 - !private ["PSo8NSCoding", "CGRectGetMidY"]
 - !private ["PSo8NSCoding", "CGSize"]
@@ -673,17 +702,20 @@ depends-member:
 - !private ["PSo8NSCoding", "NSEC_PER_SEC"]
 - !private ["PSo8NSCoding", "QOS_CLASS_BACKGROUND"]
 - !private ["PSo8NSCoding", "SKAction"]
+- !private ["PSo8NSCoding", "SKColor"]
 - !private ["PSo8NSCoding", "SKSpriteNode"]
 - !private ["PSo8NSCoding", "Tile"]
 - !private ["PSo8NSCoding", "TileMap"]
 - !private ["PSo8NSCoding", "TileType"]
 - !private ["PSo8NSCoding", "addChild"]
+- !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "buttonCheat"]
 - ["PSo8NSCoding", "buttonDown"]
 - ["PSo8NSCoding", "buttonLeft"]
 - ["PSo8NSCoding", "buttonRight"]
 - ["PSo8NSCoding", "buttonUp"]
 - !private ["PSo8NSCoding", "containsPoint"]
+- ["PSo8NSCoding", "controllButtonSize"]
 - !private ["PSo8NSCoding", "convertPointFromView"]
 - !private ["PSo8NSCoding", "coord"]
 - ["PSo8NSCoding", "createPlayer"]
@@ -724,6 +756,7 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGPoint"]
 - !private ["PSo9NSCopying", "CGPointMake"]
+- !private ["PSo9NSCopying", "CGRectGetMaxX"]
 - !private ["PSo9NSCopying", "CGRectGetMidX"]
 - !private ["PSo9NSCopying", "CGRectGetMidY"]
 - !private ["PSo9NSCopying", "CGSize"]
@@ -737,17 +770,20 @@ depends-member:
 - !private ["PSo9NSCopying", "NSEC_PER_SEC"]
 - !private ["PSo9NSCopying", "QOS_CLASS_BACKGROUND"]
 - !private ["PSo9NSCopying", "SKAction"]
+- !private ["PSo9NSCopying", "SKColor"]
 - !private ["PSo9NSCopying", "SKSpriteNode"]
 - !private ["PSo9NSCopying", "Tile"]
 - !private ["PSo9NSCopying", "TileMap"]
 - !private ["PSo9NSCopying", "TileType"]
 - !private ["PSo9NSCopying", "addChild"]
+- !private ["PSo9NSCopying", "backgroundColor"]
 - ["PSo9NSCopying", "buttonCheat"]
 - ["PSo9NSCopying", "buttonDown"]
 - ["PSo9NSCopying", "buttonLeft"]
 - ["PSo9NSCopying", "buttonRight"]
 - ["PSo9NSCopying", "buttonUp"]
 - !private ["PSo9NSCopying", "containsPoint"]
+- ["PSo9NSCopying", "controllButtonSize"]
 - !private ["PSo9NSCopying", "convertPointFromView"]
 - !private ["PSo9NSCopying", "coord"]
 - ["PSo9NSCopying", "createPlayer"]
@@ -788,6 +824,7 @@ depends-member:
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "CGPoint"]
 - !private ["CSo8NSObject", "CGPointMake"]
+- !private ["CSo8NSObject", "CGRectGetMaxX"]
 - !private ["CSo8NSObject", "CGRectGetMidX"]
 - !private ["CSo8NSObject", "CGRectGetMidY"]
 - ["CSo8NSObject", "CGSize"]
@@ -802,6 +839,7 @@ depends-member:
 - !private ["CSo8NSObject", "NSEC_PER_SEC"]
 - !private ["CSo8NSObject", "QOS_CLASS_BACKGROUND"]
 - !private ["CSo8NSObject", "SKAction"]
+- !private ["CSo8NSObject", "SKColor"]
 - ["CSo8NSObject", "SKSpriteNode"]
 - ["CSo8NSObject", "Set"]
 - !private ["CSo8NSObject", "Tile"]
@@ -810,12 +848,14 @@ depends-member:
 - ["CSo8NSObject", "UIEvent"]
 - ["CSo8NSObject", "UITouch"]
 - !private ["CSo8NSObject", "addChild"]
+- !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "buttonCheat"]
 - ["CSo8NSObject", "buttonDown"]
 - ["CSo8NSObject", "buttonLeft"]
 - ["CSo8NSObject", "buttonRight"]
 - ["CSo8NSObject", "buttonUp"]
 - !private ["CSo8NSObject", "containsPoint"]
+- ["CSo8NSObject", "controllButtonSize"]
 - !private ["CSo8NSObject", "convertPointFromView"]
 - !private ["CSo8NSObject", "coord"]
 - ["CSo8NSObject", "createPlayer"]
@@ -856,6 +896,7 @@ depends-member:
 - !private ["CSo8NSObject", "zPosition"]
 - !private ["PSo16NSObjectProtocol", "CGPoint"]
 - !private ["PSo16NSObjectProtocol", "CGPointMake"]
+- !private ["PSo16NSObjectProtocol", "CGRectGetMaxX"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidX"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
 - !private ["PSo16NSObjectProtocol", "CGSize"]
@@ -869,17 +910,20 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSEC_PER_SEC"]
 - !private ["PSo16NSObjectProtocol", "QOS_CLASS_BACKGROUND"]
 - !private ["PSo16NSObjectProtocol", "SKAction"]
+- !private ["PSo16NSObjectProtocol", "SKColor"]
 - !private ["PSo16NSObjectProtocol", "SKSpriteNode"]
 - !private ["PSo16NSObjectProtocol", "Tile"]
 - !private ["PSo16NSObjectProtocol", "TileMap"]
 - !private ["PSo16NSObjectProtocol", "TileType"]
 - !private ["PSo16NSObjectProtocol", "addChild"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "buttonCheat"]
 - ["PSo16NSObjectProtocol", "buttonDown"]
 - ["PSo16NSObjectProtocol", "buttonLeft"]
 - ["PSo16NSObjectProtocol", "buttonRight"]
 - ["PSo16NSObjectProtocol", "buttonUp"]
 - !private ["PSo16NSObjectProtocol", "containsPoint"]
+- ["PSo16NSObjectProtocol", "controllButtonSize"]
 - !private ["PSo16NSObjectProtocol", "convertPointFromView"]
 - !private ["PSo16NSObjectProtocol", "coord"]
 - ["PSo16NSObjectProtocol", "createPlayer"]
@@ -919,6 +963,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "view"]
 - !private ["PSo16NSObjectProtocol", "zPosition"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
@@ -949,6 +994,7 @@ depends-member:
 - ["CSo12SKEffectNode", "Bool"]
 - ["CSo12SKEffectNode", "CGPoint"]
 - !private ["CSo12SKEffectNode", "CGPointMake"]
+- !private ["CSo12SKEffectNode", "CGRectGetMaxX"]
 - !private ["CSo12SKEffectNode", "CGRectGetMidX"]
 - !private ["CSo12SKEffectNode", "CGRectGetMidY"]
 - ["CSo12SKEffectNode", "CGSize"]
@@ -963,6 +1009,7 @@ depends-member:
 - !private ["CSo12SKEffectNode", "NSEC_PER_SEC"]
 - !private ["CSo12SKEffectNode", "QOS_CLASS_BACKGROUND"]
 - !private ["CSo12SKEffectNode", "SKAction"]
+- !private ["CSo12SKEffectNode", "SKColor"]
 - ["CSo12SKEffectNode", "SKSpriteNode"]
 - ["CSo12SKEffectNode", "Set"]
 - !private ["CSo12SKEffectNode", "Tile"]
@@ -971,11 +1018,13 @@ depends-member:
 - ["CSo12SKEffectNode", "UIEvent"]
 - ["CSo12SKEffectNode", "UITouch"]
 - !private ["CSo12SKEffectNode", "addChild"]
+- !private ["CSo12SKEffectNode", "backgroundColor"]
 - ["CSo12SKEffectNode", "buttonCheat"]
 - ["CSo12SKEffectNode", "buttonDown"]
 - ["CSo12SKEffectNode", "buttonLeft"]
 - ["CSo12SKEffectNode", "buttonRight"]
 - ["CSo12SKEffectNode", "buttonUp"]
+- ["CSo12SKEffectNode", "controllButtonSize"]
 - !private ["CSo12SKEffectNode", "convertPointFromView"]
 - ["CSo12SKEffectNode", "createPlayer"]
 - !private ["CSo12SKEffectNode", "dispatch_after"]
@@ -1001,6 +1050,7 @@ depends-member:
 - ["CSo6SKNode", "Bool"]
 - ["CSo6SKNode", "CGPoint"]
 - !private ["CSo6SKNode", "CGPointMake"]
+- !private ["CSo6SKNode", "CGRectGetMaxX"]
 - !private ["CSo6SKNode", "CGRectGetMidX"]
 - !private ["CSo6SKNode", "CGRectGetMidY"]
 - ["CSo6SKNode", "CGSize"]
@@ -1015,6 +1065,7 @@ depends-member:
 - !private ["CSo6SKNode", "NSEC_PER_SEC"]
 - !private ["CSo6SKNode", "QOS_CLASS_BACKGROUND"]
 - !private ["CSo6SKNode", "SKAction"]
+- !private ["CSo6SKNode", "SKColor"]
 - ["CSo6SKNode", "SKSpriteNode"]
 - ["CSo6SKNode", "Set"]
 - !private ["CSo6SKNode", "Tile"]
@@ -1023,12 +1074,14 @@ depends-member:
 - ["CSo6SKNode", "UIEvent"]
 - ["CSo6SKNode", "UITouch"]
 - !private ["CSo6SKNode", "addChild"]
+- !private ["CSo6SKNode", "backgroundColor"]
 - ["CSo6SKNode", "buttonCheat"]
 - ["CSo6SKNode", "buttonDown"]
 - ["CSo6SKNode", "buttonLeft"]
 - ["CSo6SKNode", "buttonRight"]
 - ["CSo6SKNode", "buttonUp"]
 - !private ["CSo6SKNode", "containsPoint"]
+- ["CSo6SKNode", "controllButtonSize"]
 - !private ["CSo6SKNode", "convertPointFromView"]
 - !private ["CSo6SKNode", "coord"]
 - ["CSo6SKNode", "createPlayer"]
@@ -1067,6 +1120,7 @@ depends-member:
 - ["CSo7SKScene", "Bool"]
 - ["CSo7SKScene", "CGPoint"]
 - !private ["CSo7SKScene", "CGPointMake"]
+- !private ["CSo7SKScene", "CGRectGetMaxX"]
 - !private ["CSo7SKScene", "CGRectGetMidX"]
 - !private ["CSo7SKScene", "CGRectGetMidY"]
 - ["CSo7SKScene", "CGSize"]
@@ -1081,6 +1135,7 @@ depends-member:
 - !private ["CSo7SKScene", "NSEC_PER_SEC"]
 - !private ["CSo7SKScene", "QOS_CLASS_BACKGROUND"]
 - !private ["CSo7SKScene", "SKAction"]
+- !private ["CSo7SKScene", "SKColor"]
 - ["CSo7SKScene", "SKSpriteNode"]
 - ["CSo7SKScene", "Set"]
 - !private ["CSo7SKScene", "Tile"]
@@ -1089,11 +1144,13 @@ depends-member:
 - ["CSo7SKScene", "UIEvent"]
 - ["CSo7SKScene", "UITouch"]
 - !private ["CSo7SKScene", "addChild"]
+- !private ["CSo7SKScene", "backgroundColor"]
 - ["CSo7SKScene", "buttonCheat"]
 - ["CSo7SKScene", "buttonDown"]
 - ["CSo7SKScene", "buttonLeft"]
 - ["CSo7SKScene", "buttonRight"]
 - ["CSo7SKScene", "buttonUp"]
+- ["CSo7SKScene", "controllButtonSize"]
 - !private ["CSo7SKScene", "convertPointFromView"]
 - ["CSo7SKScene", "createPlayer"]
 - !private ["CSo7SKScene", "dispatch_after"]
@@ -1129,6 +1186,7 @@ depends-member:
 - ["C15SimpleLabirynth5Scene", "Bool"]
 - ["C15SimpleLabirynth5Scene", "CGPoint"]
 - !private ["C15SimpleLabirynth5Scene", "CGPointMake"]
+- !private ["C15SimpleLabirynth5Scene", "CGRectGetMaxX"]
 - !private ["C15SimpleLabirynth5Scene", "CGRectGetMidX"]
 - !private ["C15SimpleLabirynth5Scene", "CGRectGetMidY"]
 - ["C15SimpleLabirynth5Scene", "CGSize"]
@@ -1143,6 +1201,7 @@ depends-member:
 - !private ["C15SimpleLabirynth5Scene", "NSEC_PER_SEC"]
 - !private ["C15SimpleLabirynth5Scene", "QOS_CLASS_BACKGROUND"]
 - !private ["C15SimpleLabirynth5Scene", "SKAction"]
+- !private ["C15SimpleLabirynth5Scene", "SKColor"]
 - ["C15SimpleLabirynth5Scene", "SKSpriteNode"]
 - ["C15SimpleLabirynth5Scene", "Set"]
 - !private ["C15SimpleLabirynth5Scene", "Tile"]
@@ -1151,11 +1210,13 @@ depends-member:
 - ["C15SimpleLabirynth5Scene", "UIEvent"]
 - ["C15SimpleLabirynth5Scene", "UITouch"]
 - !private ["C15SimpleLabirynth5Scene", "addChild"]
+- !private ["C15SimpleLabirynth5Scene", "backgroundColor"]
 - ["C15SimpleLabirynth5Scene", "buttonCheat"]
 - ["C15SimpleLabirynth5Scene", "buttonDown"]
 - ["C15SimpleLabirynth5Scene", "buttonLeft"]
 - ["C15SimpleLabirynth5Scene", "buttonRight"]
 - ["C15SimpleLabirynth5Scene", "buttonUp"]
+- ["C15SimpleLabirynth5Scene", "controllButtonSize"]
 - !private ["C15SimpleLabirynth5Scene", "convertPointFromView"]
 - !private ["C15SimpleLabirynth5Scene", "createPlayer"]
 - ["C15SimpleLabirynth5Scene", "deinit"]
@@ -1238,12 +1299,14 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "presentScene"]
 - !private ["PSo12UIAppearance", "presentScene"]
 - !private ["PSo21UIAppearanceContainer", "presentScene"]
+- !private ["CSo7UIColor", "init"]
 - !private ["PSo17UICoordinateSpace", "presentScene"]
 - !private ["PSo13UIDynamicItem", "presentScene"]
 - !private ["PSo18UIFocusEnvironment", "presentScene"]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "CGPoint"]
 - !private ["CSo11UIResponder", "CGPointMake"]
+- !private ["CSo11UIResponder", "CGRectGetMaxX"]
 - !private ["CSo11UIResponder", "CGRectGetMidX"]
 - !private ["CSo11UIResponder", "CGRectGetMidY"]
 - ["CSo11UIResponder", "CGSize"]
@@ -1258,6 +1321,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSEC_PER_SEC"]
 - !private ["CSo11UIResponder", "QOS_CLASS_BACKGROUND"]
 - !private ["CSo11UIResponder", "SKAction"]
+- !private ["CSo11UIResponder", "SKColor"]
 - ["CSo11UIResponder", "SKSpriteNode"]
 - ["CSo11UIResponder", "Set"]
 - !private ["CSo11UIResponder", "Tile"]
@@ -1266,12 +1330,14 @@ depends-member:
 - ["CSo11UIResponder", "UIEvent"]
 - ["CSo11UIResponder", "UITouch"]
 - !private ["CSo11UIResponder", "addChild"]
+- !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "buttonCheat"]
 - ["CSo11UIResponder", "buttonDown"]
 - ["CSo11UIResponder", "buttonLeft"]
 - ["CSo11UIResponder", "buttonRight"]
 - ["CSo11UIResponder", "buttonUp"]
 - !private ["CSo11UIResponder", "containsPoint"]
+- ["CSo11UIResponder", "controllButtonSize"]
 - !private ["CSo11UIResponder", "convertPointFromView"]
 - !private ["CSo11UIResponder", "coord"]
 - ["CSo11UIResponder", "createPlayer"]
@@ -1329,6 +1395,7 @@ depends-member:
 - !private ["Ps19_CVarArgAlignedType", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "IntegerLiteralType"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_ColorLiteralConvertible", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
@@ -1454,6 +1521,7 @@ depends-nominal:
 - "PSo9NSCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
 - "Ps21NilLiteralConvertible"
 - "Sq"
 - !private "Ps21RandomAccessIndexType"
@@ -1483,6 +1551,7 @@ depends-nominal:
 - !private "PSo29UIAccessibilityIdentification"
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - !private "PSo18UIFocusEnvironment"
@@ -1496,6 +1565,7 @@ depends-nominal:
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps19_CVarArgAlignedType"
 - !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_ColorLiteralConvertible"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps14_Incrementable"
 - !private "Ps22_IntegerArithmeticType"
@@ -1529,4 +1599,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "78c35a280def3d6a488a34f656d9880c"
+interface-hash: "78fd9827bebc062430c376e275ed0a81"
