@@ -24,32 +24,15 @@ enum TileType {
 
     var color: SKColor {
         switch self {
-        //case .Wall: return SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
-        case .Wall: return SKColor(red: 46/255, green: 48/255, blue: 61/255, alpha: 1)
-        case .Ground: return SKColor(red: 61/255, green: 62/255, blue: 84/255, alpha: 1)
-        default: return SKColor(red: 1, green: 1, blue: 1, alpha: 1)
-        //case .Ground: return "ground"
-        //case .Player: return "player"
-        //case .Path: return "path"
+        case .Wall: return SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
+        case .Player: return SKColor(red: 205/255, green: 85/255, blue: 78/255, alpha: 1)
+        case .Path: return SKColor(red: 0/255, green: 183/255, blue: 152/255, alpha: 1)
+        case .Ground: return SKColor(red: 0/255, green: 134/255, blue: 128/255, alpha: 1)
         }
     }
 
     var size: CGSize {
         return CGSize(width: 18, height: 18)
-    }
-}
-
-struct Stack<Element> {
-    var items = [Element]()
-    mutating func push(item: Element) {
-        items.append(item)
-    }
-    mutating func pop() -> Element {
-        return items.removeLast()
-    }
-
-    func isEmpty() -> Bool {
-        return items.isEmpty
     }
 }
 
@@ -67,13 +50,14 @@ struct Queue<Element> {
     }
 }
 
-class Tile : SKSpriteNode {
+/// MARK: Tile
 
+class Tile : SKSpriteNode {
+    static let size = CGSize(width: 18, height: 18)
     var type: TileType
     var coord: CGPoint
 
     init(type: TileType, coord: CGPoint) {
-
         self.type = type
         self.coord = coord
 
@@ -83,11 +67,8 @@ class Tile : SKSpriteNode {
     }
 
     required init?(coder aDecoder: NSCoder) {
-
         fatalError("init(coder:) has not beed implemented")
     }
-
-
 }
 
 /// MARK: TileMap
@@ -95,35 +76,28 @@ class Tile : SKSpriteNode {
 class TileMap : SKNode {
 
     let mapSize: CGSize
-    let tileSize: CGSize
     var tiles = Array<Array<Tile?>>()
     let tileLayer = SKNode()
-    var player: Tile?
     var exitCoords: CGPoint
 
-    init(mapSize: CGSize, tileSize: CGSize) {
+    init(mapSize: CGSize) {
 
         self.mapSize = mapSize
-        self.tileSize = tileSize
 
-
-        let y = Int(arc4random_uniform(UInt32(mapSize.height - 1))) + 1
+        // Exit coordinates
+        let y = Int(arc4random_uniform(UInt32(mapSize.height - 2))) + 1
         let x = 0
-
         self.exitCoords = CGPoint(x: x, y: y)
 
         super.init()
 
         addChild(tileLayer)
 
-        for y in 0...(Int(mapSize.height) - 1) {
+        for _ in 0...(Int(mapSize.height) - 1) {
             tiles.append(Array(count: Int(mapSize.width), repeatedValue: nil))
         }
 
         createMap()
-
-
-
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -131,54 +105,27 @@ class TileMap : SKNode {
         fatalError("init(coder:) has not beed implemented")
     }
 
-
-    func tilePositionForCoord(coord: CGPoint) -> CGPoint {
-
-        let x = tileSize.width * coord.x + tileSize.width / 2
-        let y = tileSize.height * coord.y + tileSize.height / 2
-
-        return CGPoint(x: x, y: y)
-    }
-
-    func tileCoordForPosition(tileMapPosition: CGPoint) -> CGPoint {
-
-        let mapPosition = convertPoint(tileMapPosition, toNode: tileLayer)
-
-        print("mapPosition ", mapPosition)
-
-        let x = Int(mapPosition.x / tileSize.width)
-        let y = Int(mapPosition.y / tileSize.height)
-
-        return CGPoint(x: x, y: y)
-    }
-
-
-
-    func createMap() {
+    private func createMap() {
 
         for y in 0...Int(mapSize.height - 1) {
             for x in 0...Int(mapSize.width - 1) {
-                    tiles[y][x] = setTile(TileType.Wall, coord: CGPoint(x: x, y: y))
+                let coord = CGPoint(x: x, y: y)
+                tiles[y][x] = Tile(type: TileType.Wall, coord: coord)
+                tiles[y][x]!.position = tilePositionForCoord(coord)
             }
         }
 
-
+        // Setting exit tile
         tiles[Int(self.exitCoords.y)][Int(self.exitCoords.x)] = Tile(type: TileType.Ground, coord: self.exitCoords)
         tiles[Int(self.exitCoords.y)][Int(self.exitCoords.x)]!.position = tilePositionForCoord(exitCoords)
 
         carve(Int(self.exitCoords.x), y: Int(self.exitCoords.y))
 
-        
         for y in 0...Int(mapSize.height - 1) {
             for x in 0...Int(mapSize.width - 1) {
-                 addChild(tiles[y][x]!)
+                addChild(tiles[y][x]!)
             }
         }
-
-
-
-
-
     }
 
     private func carve(x: Int, y: Int) {
@@ -198,58 +145,18 @@ class TileMap : SKNode {
                 && 1...Int(self.mapSize.height - 2) ~= y1 && 1...Int(self.mapSize.height - 2) ~= y2
                 && tiles[y1][x1]?.type == TileType.Wall && tiles[y2][x2]?.type == TileType.Wall {
 
-                    tiles[y1][x1] = setTile(TileType.Ground, coord: CGPoint(x: x1, y: y1))
+                tiles[y1][x1] = Tile(type: TileType.Ground, coord: CGPoint(x: x1, y: y1))
+                tiles[y1][x1]!.position = tilePositionForCoord(CGPoint(x: x1, y: y1))
 
-                    tiles[y2][x2] = setTile(TileType.Ground, coord: CGPoint(x: x2, y: y2))
+                tiles[y2][x2] = Tile(type: TileType.Ground, coord: CGPoint(x: x2, y: y2))
+                tiles[y2][x2]!.position = tilePositionForCoord(CGPoint(x: x2, y: y2))
 
-                    carve(x2, y: y2)
-                } else {
-                    dir = (dir + 1) % 4
-                    count += 1
-                }
-            }
-
-    }
-
-    private func carve2(x: Int, y: Int) {
-        var walls = Stack<(x: Int, y: Int)>()
-        var cell = (x: x, y: y)
-        let directions = [Direction.Left, Direction.Down, Direction.Right, Direction.Up]
-
-        tiles[y][x] = setTile(TileType.Ground, coord: CGPoint(x: x, y: y))
-        cell = (x, y)
-        //walls.push((x: x, y: y))
-
-        repeat {
-            // If the current cell has any neighbours which have not been visited
-            var neighbours = [(Int, Int)]()
-
-
-            for i in 0..<directions.count {
-                let dir = directions[i]
-                let x = cell.x + dir.dx
-                let y = cell.y + dir.dy
-
-                if 1...Int(self.mapSize.width - 2) ~= x
-                    && 1...Int(self.mapSize.height - 2) ~= y
-                    && tiles[y][x]?.type == TileType.Wall {
-                    neighbours.append((x, y))
-                }
-            }
-
-            if neighbours.isEmpty {
-                cell = walls.pop()
+                carve(x2, y: y2)
             } else {
-                walls.push(cell)
-                let randomNeighbour = Int(arc4random_uniform(UInt32(neighbours.count)))
-
-                cell = neighbours[randomNeighbour]
-
-
+                dir = (dir + 1) % 4
+                count += 1
             }
-
-            tiles[cell.y][cell.x] = setTile(TileType.Ground, coord: CGPoint(x: cell.x, y: cell.y))
-        } while !walls.isEmpty()
+        }
     }
 
     func findShortestPathToExit(playerCoords: (x: Int, y: Int), exitCoords: (x: Int, y: Int)) -> [(x: Int, y: Int)] {
@@ -283,7 +190,6 @@ class TileMap : SKNode {
 
                     if (x, y) == exitCoords {
                         found = true
-                        print(found)
                         break
                     }
 
@@ -317,14 +223,24 @@ class TileMap : SKNode {
 
 
 
-    private func setTile(type: TileType, coord: CGPoint) -> Tile {
+    func tilePositionForCoord(coord: CGPoint) -> CGPoint {
 
-        let tile = Tile(type: type, coord: coord)
+        let x = Tile.size.width * coord.x + Tile.size.width / 2
+        let y = Tile.size.height * coord.y + Tile.size.height / 2
 
-        tile.position = tilePositionForCoord(coord)
-
-        return tile
+        return CGPoint(x: x, y: y)
     }
+
+    func tileCoordForPosition(tileMapPosition: CGPoint) -> CGPoint {
+
+        let mapPosition = convertPoint(tileMapPosition, toNode: tileLayer)
+
+        let x = Int(mapPosition.x / Tile.size.width)
+        let y = Int(mapPosition.y / Tile.size.height)
+        
+        return CGPoint(x: x, y: y)
+    }
+
 }
 
 

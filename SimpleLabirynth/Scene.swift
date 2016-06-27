@@ -10,8 +10,8 @@ import SpriteKit
 
 class Scene: SKScene {
 
-    var tileMap: TileMap!
-    let tileSize: CGSize
+    let tileMap: TileMap
+    let player: Player
     let mapSize: CGSize
     let controllButtonSize: CGSize
 
@@ -19,153 +19,29 @@ class Scene: SKScene {
     var buttonDown: SKSpriteNode?
     var buttonRight: SKSpriteNode?
     var buttonLeft: SKSpriteNode?
-    var buttonCheat: SKSpriteNode?
+    var buttonCheat: SKLabelNode?
 
 
     override init(size: CGSize) {
 
-        self.tileSize = CGSize(width: 18, height: 18)
-        self.mapSize = CGSize(width: 23, height: 29)
         self.controllButtonSize = CGSize(width: 58, height: 58)
+        self.mapSize = CGSize(width: size.width / Tile.size.width,
+                              height: (size.height - 2 * controllButtonSize.height) / Tile.size.height)
+
+        self.tileMap = TileMap(mapSize: self.mapSize)
+
+        self.player = Player(tileMap: self.tileMap)
 
         super.init(size: size)
 
-        self.tileMap = TileMap(mapSize: mapSize, tileSize: tileSize)
+        self.scaleMode = SKSceneScaleMode.ResizeFill
+        self.backgroundColor = SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
 
-        backgroundColor = SKColor(red: 38/255, green: 35/255, blue: 58/255, alpha: 1)
+        self.tileMap.position = CGPoint(x: 0, y: 2 * controllButtonSize.height)
 
-        tileMap.position = CGPoint(x: 0, y: 5 * tileSize.height)
-        addChild(tileMap)
-
-        createPlayer()
-
-        setupButtons()
-
-
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-
-        fatalError("init(coder:) has not beed implemented")
-    }
-
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            let position: CGPoint = convertPointFromView(touch.locationInView(view))
-            print(position.x, " ", position.y)
-
-            let tilePosition = tileMap.tileCoordForPosition(position)
-            print(tilePosition)
-
-            if buttonUp!.containsPoint(position) {
-
-                movePlayer(Direction.Up)
-                print("button up")
-
-            } else if buttonDown!.containsPoint(position) {
-
-                movePlayer(Direction.Down)
-                print("button down")
-
-            } else if buttonRight!.containsPoint(position) {
-
-                movePlayer(Direction.Right)
-                print("button right")
-
-            } else if buttonLeft!.containsPoint(position) {
-                
-                movePlayer(Direction.Left)
-                print("button left")
-                
-            } else if buttonCheat!.containsPoint(position) {
-
-                let qualityOfServiceClass = QOS_CLASS_BACKGROUND
-                let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
-
-                /*
-                dispatch_async(backgroundQueue, {
-                    print("This is run on the background queue")
-
-
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        print("This is run on the main queue, after the previous code in outer block")
-                    })
-                })
- */
-
-                let path = tileMap.findShortestPathToExit((x: Int(self.tileMap.player!.coord.x), y: Int(self.tileMap.player!.coord.y)), exitCoords: (x: Int(tileMap.exitCoords.x), y: Int(tileMap.exitCoords.y)))
-                showPath(path)
-                print("button left")
-
-                let delay = 3 * Double(NSEC_PER_SEC)
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue()) {
-                    self.enumerateChildNodesWithName("Path", usingBlock: { node,_ in
-                        node.removeFromParent()
-                    })
-                    
-                }
-
-            }
-        }
-    }
-
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if tileMap.player?.coord == tileMap.exitCoords {
-            let gameOverScene = GameOverScene(size: self.size)
-            self.view?.presentScene(gameOverScene)
-        }
-    }
-
-    private func showPath(path: [(x: Int, y: Int)]) {
-
-        for i in path {
-            let tile = Tile(type: TileType.Path, coord: CGPoint(x: i.x, y: i.y))
-            let tilePositionInMap = tileMap.tilePositionForCoord(CGPoint(x: i.x, y: i.y))
-            tile.position.x = tileMap.position.x + tilePositionInMap.x
-            tile.position.y = tileMap.position.y + tilePositionInMap.y
-            tile.zPosition = 100
-            tile.name = "Path"
-            
-            self.addChild(tile)
-
-        }
-
-
-
-
-    }
-
-    private func createPlayer() {
-        let currentPoint = tileMap.tileCoordForPosition(CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)))
-        let directions = [Direction.Left, Direction.Down, Direction.Right, Direction.Up, Direction.LeftDown, Direction.LeftUp, Direction.RightDown, Direction.RightUp]
-        var playerPosition: CGPoint?
-
-
-
-        // 
-        for i in 0..<directions.count {
-            let dir = directions[i]
-            let x = Int(currentPoint.x) + dir.dx
-            let y = Int(currentPoint.y) + dir.dy
-
-            if tileMap.tiles[y][x]?.type == TileType.Ground {
-                playerPosition = CGPoint(x: x, y: y)
-                break
-            }
-        }
-
-        self.tileMap.player = Tile(type: TileType.Player, coord: playerPosition!)
-        self.tileMap.player?.position = tileMap.tilePositionForCoord(playerPosition!)
-        self.tileMap.player?.zPosition = 200
-
-        self.tileMap.addChild(self.tileMap.player!)
-
-        
-
-    }
-
-    func setupButtons() {
+        // Add to scene
+        self.tileMap.addChild(self.player)
+        self.addChild(tileMap)
 
         self.buttonUp = SKSpriteNode(imageNamed: "buttonUp")
         self.buttonUp!.position = CGPointMake(self.controllButtonSize.width / 2 + 15, self.controllButtonSize.height * 1.5)
@@ -195,67 +71,82 @@ class Scene: SKScene {
 
         self.addChild(self.buttonLeft!)
 
-        self.buttonCheat = SKSpriteNode(imageNamed: "buttonCheat")
-        self.buttonCheat!.position = CGPointMake(CGRectGetMidX(self.frame), self.controllButtonSize.height)
-        self.buttonCheat!.name = "buttonCheat"
-        self.buttonCheat!.zPosition = 10
-
+        self.buttonCheat = SKLabelNode(text: "CHEAT")
+        self.buttonCheat!.fontSize = 45
+        self.buttonCheat!.fontColor = SKColor(red: 205/255, green: 202/255, blue: 219/255, alpha: 1)
+        self.buttonCheat!.position = CGPointMake(CGRectGetMidX(self.frame), 45)
+        
+        
         self.addChild(self.buttonCheat!)
 
     }
 
+    required init?(coder aDecoder: NSCoder) {
 
-    func movePlayer(direction: Direction) {
+        fatalError("init(coder:) has not beed implemented")
+    }
 
-        let player = tileMap.player!
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let touch = touches.first {
+            let positionInScene = touch.locationInNode(self)
+            let touchedNode = self.nodeAtPoint(positionInScene)
 
-        var destinationPoint: CGPoint
-        var delta: CGVector
+            switch touchedNode {
+            case buttonUp!:
+                self.player.move(Direction.Up)
+            case buttonDown!:
+                self.player.move(Direction.Down)
+            case buttonRight!:
+                self.player.move(Direction.Right)
+            case buttonLeft!:
+                self.player.move(Direction.Left)
+            case buttonCheat!:
+                let path = tileMap.findShortestPathToExit((x: Int(self.player.coord.x), y: Int(self.player.coord.y)), exitCoords: (x: Int(tileMap.exitCoords.x), y: Int(tileMap.exitCoords.y)))
 
-        switch direction {
-        case .Up:
-            destinationPoint = CGPointMake(player.position.x, player.position.y + tileSize.height)
-            delta = CGVector(dx: 0, dy: tileSize.height)
-        case .Down:
-            destinationPoint = CGPointMake(player.position.x, player.position.y - tileSize.height)
-            delta = CGVector(dx: 0, dy: -tileSize.height)
-        case .Left:
-            destinationPoint = CGPointMake(player.position.x - tileSize.width, player.position.y)
-            delta = CGVector(dx: -tileSize.width, dy: 0)
-        case .Right:
-            destinationPoint = CGPointMake(player.position.x + tileSize.width, player.position.y)
-            delta = CGVector(dx: tileSize.width, dy: 0)
-        default:
-            destinationPoint = CGPointMake(player.position.x, player.position.y)
-            delta = CGVector(dx: 0, dy: 0)
+                showPath(path)
+
+                let delay = 3 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    self.enumerateChildNodesWithName("Path", usingBlock: { node,_ in
+                        node.removeFromParent()
+                    })
+                }
+            default:
+                break
+            }
 
         }
+    }
 
-        if !isCollision(destinationPoint) {
-            player.coord = tileMap.tileCoordForPosition(destinationPoint)
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if player.coord == tileMap.exitCoords {
+            let gameOverScene = GameOverScene(size: self.size)
 
-            let moveAction = SKAction.moveBy(delta, duration: 0.1)
+            self.view?.presentScene(gameOverScene)
+        }
+    }
 
 
-            player.runAction(moveAction)
-
+    private func showPath(path: [(x: Int, y: Int)]) {
+        for i in path {
+            let tile = Tile(type: TileType.Path, coord: CGPoint(x: i.x, y: i.y))
+            let tilePositionInMap = tileMap.tilePositionForCoord(CGPoint(x: i.x, y: i.y))
             
-            //player.position = destinationPoint
+            tile.position.x = tileMap.position.x + tilePositionInMap.x
+            tile.position.y = tileMap.position.y + tilePositionInMap.y
+            tile.zPosition = 100
+            tile.name = "Path"
+            
+            self.addChild(tile)
         }
     }
 
-    func isCollision(coord: CGPoint) -> Bool {
 
-        let mapPoint = tileMap.tileCoordForPosition(coord)
-        let x = Int(mapPoint.x)
-        let y = Int(mapPoint.y)
 
-        if tileMap.tiles[y][x]?.type == TileType.Wall {
-            return true
-        } else {
-            return false
-        }
-    }
+
+
+
 
 
 

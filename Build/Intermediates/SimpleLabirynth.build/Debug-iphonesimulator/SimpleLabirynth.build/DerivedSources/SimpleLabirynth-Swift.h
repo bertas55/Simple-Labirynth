@@ -115,30 +115,7 @@ SWIFT_CLASS("_TtC15SimpleLabirynth11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class SKSpriteNode;
-@class SKTexture;
 @class NSCoder;
-
-SWIFT_CLASS("_TtC15SimpleLabirynth6Button")
-@interface Button : SKNode
-@property (nonatomic, readonly, strong) SKSpriteNode * _Nonnull sprite;
-@property (nonatomic, readonly, strong) SKTexture * _Nonnull texture;
-@property (nonatomic, readonly) CGPoint coord;
-- (nonnull instancetype)initWithCoord:(CGPoint)coord size:(CGSize)size texture:(SKTexture * _Nonnull)texture OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class SKView;
-
-SWIFT_CLASS("_TtC15SimpleLabirynth8Controls")
-@interface Controls : SKScene
-@property (nonatomic, strong) SKNode * _Null_unspecified button;
-- (void)didMoveToView:(SKView * _Nonnull)view;
-- (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UITouch;
 @class UIEvent;
 
@@ -162,33 +139,43 @@ SWIFT_CLASS("_TtC15SimpleLabirynth18GameViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+/// MARK: Tile
+SWIFT_CLASS("_TtC15SimpleLabirynth4Tile")
+@interface Tile : SKSpriteNode
++ (CGSize)size;
+@property (nonatomic) CGPoint coord;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class TileMap;
+
+SWIFT_CLASS("_TtC15SimpleLabirynth6Player")
+@interface Player : Tile
+- (nonnull instancetype)initWithTileMap:(TileMap * _Nonnull)tileMap OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class SKLabelNode;
 
 SWIFT_CLASS("_TtC15SimpleLabirynth5Scene")
 @interface Scene : SKScene
-@property (nonatomic, strong) TileMap * _Null_unspecified tileMap;
-@property (nonatomic, readonly) CGSize tileSize;
+@property (nonatomic, readonly, strong) TileMap * _Nonnull tileMap;
+@property (nonatomic, readonly, strong) Player * _Nonnull player;
 @property (nonatomic, readonly) CGSize mapSize;
 @property (nonatomic, readonly) CGSize controllButtonSize;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonUp;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonDown;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonRight;
 @property (nonatomic, strong) SKSpriteNode * _Nullable buttonLeft;
-@property (nonatomic, strong) SKSpriteNode * _Nullable buttonCheat;
+@property (nonatomic, strong) SKLabelNode * _Nullable buttonCheat;
 - (nonnull instancetype)initWithSize:(CGSize)size OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)touchesEnded:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
-- (void)setupButtons;
-- (BOOL)isCollision:(CGPoint)coord;
 @end
 
-
-SWIFT_CLASS("_TtC15SimpleLabirynth4Tile")
-@interface Tile : SKSpriteNode
-@property (nonatomic) CGPoint coord;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 
@@ -196,15 +183,12 @@ SWIFT_CLASS("_TtC15SimpleLabirynth4Tile")
 SWIFT_CLASS("_TtC15SimpleLabirynth7TileMap")
 @interface TileMap : SKNode
 @property (nonatomic, readonly) CGSize mapSize;
-@property (nonatomic, readonly) CGSize tileSize;
 @property (nonatomic, readonly, strong) SKNode * _Nonnull tileLayer;
-@property (nonatomic, strong) Tile * _Nullable player;
 @property (nonatomic) CGPoint exitCoords;
-- (nonnull instancetype)initWithMapSize:(CGSize)mapSize tileSize:(CGSize)tileSize OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithMapSize:(CGSize)mapSize OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (CGPoint)tilePositionForCoord:(CGPoint)coord;
 - (CGPoint)tileCoordForPosition:(CGPoint)tileMapPosition;
-- (void)createMap;
 @end
 
 #pragma clang diagnostic pop

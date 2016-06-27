@@ -1,12 +1,12 @@
 //
-//  MazeBuilder.swift
+//  Direction.swift
 //  SimpleLabirynth
 //
-//  Created by Hubert on 23.06.2016.
+//  Created by Hubert on 26.06.2016.
 //  Copyright © 2016 Hubert. All rights reserved.
 //
 
-import SpriteKit
+import Foundation
 
 enum Direction: Int {
     case Left = 0, Down, Right, Up, LeftUp, LeftDown, RightUp, RightDown
@@ -33,30 +33,3 @@ enum Direction: Int {
         }
     }
 }
-
-
-class MazeBuilder {
-
-    // MARK: Type
-
-
-    var maze: TileMap?
-
-    // MARK: Initialization
-
-    init(maze: TileMap) {
-        self.maze = maze
-    }
-
-
-    // MARK: Methods
-
-    func createMaze(width: Int, height: Int) -> TileMap {
-        
-
-        return TileMap(mapSize: CGSize(width: 3, height: 3), tileSize: CGSize(width: 3, height: 3))
-    }
-
-
-}
-

@@ -8,28 +8,31 @@ provides-member:
 provides-dynamic-lookup:
 - "touchesBegan"
 depends-top-level:
-- !private "CGRectGetMidX"
-- "CGSize"
-- !private "CGPointMake"
-- "NSCoder"
-- !private "SKColor"
-- "SKScene"
-- "UIEvent"
-- "UITouch"
-- !private "fatalError"
 - "Set"
-- !private "Scene"
+- !private "fatalError"
 - "GameOverScene"
 - !private "StringLiteralType"
-- !private "/"
+- !private "CGPointMake"
+- !private "CGRectGetMidX"
 - !private "CGPoint"
-- !private "CGRectGetMidY"
 - "SKSpriteNode"
+- !private "SKColor"
+- "CGSize"
+- !private "-"
+- !private "Scene"
+- "SKScene"
+- !private "CGRectGetMidY"
+- "SKLabelNode"
+- "UIEvent"
+- !private "/"
+- "UITouch"
+- "NSCoder"
 depends-member:
 - !private ["Ps9AnyObject", "CGPointMake"]
 - !private ["Ps9AnyObject", "CGRectGetMidX"]
 - !private ["Ps9AnyObject", "CGRectGetMidY"]
 - !private ["Ps9AnyObject", "SKColor"]
+- !private ["Ps9AnyObject", "SKLabelNode"]
 - !private ["Ps9AnyObject", "SKSpriteNode"]
 - !private ["Ps9AnyObject", "Scene"]
 - !private ["Ps9AnyObject", "addChild"]
@@ -38,8 +41,11 @@ depends-member:
 - !private ["Ps9AnyObject", "containsPoint"]
 - !private ["Ps9AnyObject", "convertPointFromView"]
 - !private ["Ps9AnyObject", "fatalError"]
+- !private ["Ps9AnyObject", "fontColor"]
+- !private ["Ps9AnyObject", "fontSize"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "labelWin"]
 - !private ["Ps9AnyObject", "locationInView"]
 - !private ["Ps9AnyObject", "name"]
 - !private ["Ps9AnyObject", "position"]
@@ -64,6 +70,7 @@ depends-member:
 - !private ["Ps11CVarArgType", "CGRectGetMidY"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
 - !private ["Ps11CVarArgType", "SKColor"]
+- !private ["Ps11CVarArgType", "SKLabelNode"]
 - !private ["Ps11CVarArgType", "SKSpriteNode"]
 - !private ["Ps11CVarArgType", "Scene"]
 - !private ["Ps11CVarArgType", "addChild"]
@@ -72,8 +79,11 @@ depends-member:
 - !private ["Ps11CVarArgType", "containsPoint"]
 - !private ["Ps11CVarArgType", "convertPointFromView"]
 - !private ["Ps11CVarArgType", "fatalError"]
+- !private ["Ps11CVarArgType", "fontColor"]
+- !private ["Ps11CVarArgType", "fontSize"]
 - !private ["Ps11CVarArgType", "frame"]
 - ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "labelWin"]
 - !private ["Ps11CVarArgType", "locationInView"]
 - !private ["Ps11CVarArgType", "name"]
 - !private ["Ps11CVarArgType", "position"]
@@ -96,6 +106,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "SKColor"]
+- !private ["Ps28CustomDebugStringConvertible", "SKLabelNode"]
 - !private ["Ps28CustomDebugStringConvertible", "SKSpriteNode"]
 - !private ["Ps28CustomDebugStringConvertible", "Scene"]
 - ["Ps28CustomDebugStringConvertible", "Some"]
@@ -108,8 +119,11 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "convertPointFromView"]
 - !private ["Ps28CustomDebugStringConvertible", "fatalError"]
 - !private ["Ps28CustomDebugStringConvertible", "first"]
+- !private ["Ps28CustomDebugStringConvertible", "fontColor"]
+- !private ["Ps28CustomDebugStringConvertible", "fontSize"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "labelWin"]
 - !private ["Ps28CustomDebugStringConvertible", "locationInView"]
 - !private ["Ps28CustomDebugStringConvertible", "name"]
 - !private ["Ps28CustomDebugStringConvertible", "position"]
@@ -125,6 +139,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "SKColor"]
+- !private ["Ps23CustomStringConvertible", "SKLabelNode"]
 - !private ["Ps23CustomStringConvertible", "SKSpriteNode"]
 - !private ["Ps23CustomStringConvertible", "Scene"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
@@ -137,8 +152,11 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "convertPointFromView"]
 - !private ["Ps23CustomStringConvertible", "fatalError"]
 - !private ["Ps23CustomStringConvertible", "first"]
+- !private ["Ps23CustomStringConvertible", "fontColor"]
+- !private ["Ps23CustomStringConvertible", "fontSize"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "labelWin"]
 - !private ["Ps23CustomStringConvertible", "locationInView"]
 - !private ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "position"]
@@ -155,6 +173,7 @@ depends-member:
 - !private ["Ps9Equatable", "Index"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "SKColor"]
+- !private ["Ps9Equatable", "SKLabelNode"]
 - !private ["Ps9Equatable", "SKSpriteNode"]
 - !private ["Ps9Equatable", "Scene"]
 - !private ["Ps9Equatable", "SubSequence"]
@@ -168,8 +187,11 @@ depends-member:
 - !private ["Ps9Equatable", "convertPointFromView"]
 - !private ["Ps9Equatable", "fatalError"]
 - !private ["Ps9Equatable", "first"]
+- !private ["Ps9Equatable", "fontColor"]
+- !private ["Ps9Equatable", "fontSize"]
 - !private ["Ps9Equatable", "frame"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "labelWin"]
 - !private ["Ps9Equatable", "locationInView"]
 - !private ["Ps9Equatable", "name"]
 - !private ["Ps9Equatable", "position"]
@@ -188,6 +210,7 @@ depends-member:
 - ["C15SimpleLabirynth13GameOverScene", "CGSize"]
 - ["C15SimpleLabirynth13GameOverScene", "NSCoder"]
 - !private ["C15SimpleLabirynth13GameOverScene", "SKColor"]
+- ["C15SimpleLabirynth13GameOverScene", "SKLabelNode"]
 - ["C15SimpleLabirynth13GameOverScene", "SKSpriteNode"]
 - !private ["C15SimpleLabirynth13GameOverScene", "Scene"]
 - ["C15SimpleLabirynth13GameOverScene", "Set"]
@@ -201,6 +224,7 @@ depends-member:
 - !private ["C15SimpleLabirynth13GameOverScene", "fatalError"]
 - !private ["C15SimpleLabirynth13GameOverScene", "frame"]
 - ["C15SimpleLabirynth13GameOverScene", "init"]
+- !private ["C15SimpleLabirynth13GameOverScene", "labelWin"]
 - !private ["C15SimpleLabirynth13GameOverScene", "size"]
 - ["C15SimpleLabirynth13GameOverScene", "touchesBegan"]
 - !private ["C15SimpleLabirynth13GameOverScene", "view"]
@@ -212,6 +236,7 @@ depends-member:
 - !private ["Ps8Hashable", "Index"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "SKColor"]
+- !private ["Ps8Hashable", "SKLabelNode"]
 - !private ["Ps8Hashable", "SKSpriteNode"]
 - !private ["Ps8Hashable", "Scene"]
 - !private ["Ps8Hashable", "SubSequence"]
@@ -224,8 +249,11 @@ depends-member:
 - !private ["Ps8Hashable", "convertPointFromView"]
 - !private ["Ps8Hashable", "fatalError"]
 - !private ["Ps8Hashable", "first"]
+- !private ["Ps8Hashable", "fontColor"]
+- !private ["Ps8Hashable", "fontSize"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "labelWin"]
 - !private ["Ps8Hashable", "locationInView"]
 - !private ["Ps8Hashable", "name"]
 - !private ["Ps8Hashable", "position"]
@@ -248,6 +276,7 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRectGetMidX"]
 - !private ["PSo8NSCoding", "CGRectGetMidY"]
 - !private ["PSo8NSCoding", "SKColor"]
+- !private ["PSo8NSCoding", "SKLabelNode"]
 - !private ["PSo8NSCoding", "SKSpriteNode"]
 - !private ["PSo8NSCoding", "Scene"]
 - !private ["PSo8NSCoding", "addChild"]
@@ -256,8 +285,11 @@ depends-member:
 - !private ["PSo8NSCoding", "containsPoint"]
 - !private ["PSo8NSCoding", "convertPointFromView"]
 - !private ["PSo8NSCoding", "fatalError"]
+- !private ["PSo8NSCoding", "fontColor"]
+- !private ["PSo8NSCoding", "fontSize"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "labelWin"]
 - !private ["PSo8NSCoding", "name"]
 - !private ["PSo8NSCoding", "position"]
 - !private ["PSo8NSCoding", "presentScene"]
@@ -269,6 +301,7 @@ depends-member:
 - !private ["PSo9NSCopying", "CGRectGetMidX"]
 - !private ["PSo9NSCopying", "CGRectGetMidY"]
 - !private ["PSo9NSCopying", "SKColor"]
+- !private ["PSo9NSCopying", "SKLabelNode"]
 - !private ["PSo9NSCopying", "SKSpriteNode"]
 - !private ["PSo9NSCopying", "Scene"]
 - !private ["PSo9NSCopying", "addChild"]
@@ -277,8 +310,11 @@ depends-member:
 - !private ["PSo9NSCopying", "containsPoint"]
 - !private ["PSo9NSCopying", "convertPointFromView"]
 - !private ["PSo9NSCopying", "fatalError"]
+- !private ["PSo9NSCopying", "fontColor"]
+- !private ["PSo9NSCopying", "fontSize"]
 - !private ["PSo9NSCopying", "frame"]
 - ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "labelWin"]
 - !private ["PSo9NSCopying", "name"]
 - !private ["PSo9NSCopying", "position"]
 - !private ["PSo9NSCopying", "size"]
@@ -292,6 +328,7 @@ depends-member:
 - ["CSo8NSObject", "CGSize"]
 - ["CSo8NSObject", "NSCoder"]
 - !private ["CSo8NSObject", "SKColor"]
+- ["CSo8NSObject", "SKLabelNode"]
 - ["CSo8NSObject", "SKSpriteNode"]
 - !private ["CSo8NSObject", "Scene"]
 - ["CSo8NSObject", "Set"]
@@ -303,8 +340,11 @@ depends-member:
 - !private ["CSo8NSObject", "containsPoint"]
 - !private ["CSo8NSObject", "convertPointFromView"]
 - !private ["CSo8NSObject", "fatalError"]
+- !private ["CSo8NSObject", "fontColor"]
+- !private ["CSo8NSObject", "fontSize"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "labelWin"]
 - !private ["CSo8NSObject", "locationInView"]
 - !private ["CSo8NSObject", "name"]
 - !private ["CSo8NSObject", "position"]
@@ -316,6 +356,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidX"]
 - !private ["PSo16NSObjectProtocol", "CGRectGetMidY"]
 - !private ["PSo16NSObjectProtocol", "SKColor"]
+- !private ["PSo16NSObjectProtocol", "SKLabelNode"]
 - !private ["PSo16NSObjectProtocol", "SKSpriteNode"]
 - !private ["PSo16NSObjectProtocol", "Scene"]
 - !private ["PSo16NSObjectProtocol", "addChild"]
@@ -324,8 +365,11 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "containsPoint"]
 - !private ["PSo16NSObjectProtocol", "convertPointFromView"]
 - !private ["PSo16NSObjectProtocol", "fatalError"]
+- !private ["PSo16NSObjectProtocol", "fontColor"]
+- !private ["PSo16NSObjectProtocol", "fontSize"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "labelWin"]
 - !private ["PSo16NSObjectProtocol", "locationInView"]
 - !private ["PSo16NSObjectProtocol", "name"]
 - !private ["PSo16NSObjectProtocol", "position"]
@@ -346,6 +390,7 @@ depends-member:
 - ["CSo12SKEffectNode", "CGSize"]
 - ["CSo12SKEffectNode", "NSCoder"]
 - !private ["CSo12SKEffectNode", "SKColor"]
+- ["CSo12SKEffectNode", "SKLabelNode"]
 - ["CSo12SKEffectNode", "SKSpriteNode"]
 - !private ["CSo12SKEffectNode", "Scene"]
 - ["CSo12SKEffectNode", "Set"]
@@ -358,9 +403,14 @@ depends-member:
 - !private ["CSo12SKEffectNode", "fatalError"]
 - !private ["CSo12SKEffectNode", "frame"]
 - ["CSo12SKEffectNode", "init"]
+- ["CSo12SKEffectNode", "labelWin"]
 - !private ["CSo12SKEffectNode", "size"]
 - ["CSo12SKEffectNode", "touchesBegan"]
 - !private ["CSo12SKEffectNode", "view"]
+- !private ["CSo11SKLabelNode", "fontColor"]
+- !private ["CSo11SKLabelNode", "fontSize"]
+- !private ["CSo11SKLabelNode", "init"]
+- !private ["CSo11SKLabelNode", "position"]
 - !private ["CSo6SKNode", "CGPoint"]
 - !private ["CSo6SKNode", "CGPointMake"]
 - !private ["CSo6SKNode", "CGRectGetMidX"]
@@ -368,6 +418,7 @@ depends-member:
 - ["CSo6SKNode", "CGSize"]
 - ["CSo6SKNode", "NSCoder"]
 - !private ["CSo6SKNode", "SKColor"]
+- ["CSo6SKNode", "SKLabelNode"]
 - ["CSo6SKNode", "SKSpriteNode"]
 - !private ["CSo6SKNode", "Scene"]
 - ["CSo6SKNode", "Set"]
@@ -379,8 +430,11 @@ depends-member:
 - !private ["CSo6SKNode", "containsPoint"]
 - !private ["CSo6SKNode", "convertPointFromView"]
 - !private ["CSo6SKNode", "fatalError"]
+- !private ["CSo6SKNode", "fontColor"]
+- !private ["CSo6SKNode", "fontSize"]
 - !private ["CSo6SKNode", "frame"]
 - ["CSo6SKNode", "init"]
+- ["CSo6SKNode", "labelWin"]
 - !private ["CSo6SKNode", "name"]
 - !private ["CSo6SKNode", "position"]
 - !private ["CSo6SKNode", "size"]
@@ -393,6 +447,7 @@ depends-member:
 - ["CSo7SKScene", "CGSize"]
 - ["CSo7SKScene", "NSCoder"]
 - !private ["CSo7SKScene", "SKColor"]
+- ["CSo7SKScene", "SKLabelNode"]
 - ["CSo7SKScene", "SKSpriteNode"]
 - !private ["CSo7SKScene", "Scene"]
 - ["CSo7SKScene", "Set"]
@@ -405,6 +460,7 @@ depends-member:
 - !private ["CSo7SKScene", "fatalError"]
 - !private ["CSo7SKScene", "frame"]
 - ["CSo7SKScene", "init"]
+- ["CSo7SKScene", "labelWin"]
 - !private ["CSo7SKScene", "size"]
 - ["CSo7SKScene", "touchesBegan"]
 - !private ["CSo7SKScene", "view"]
@@ -449,6 +505,7 @@ depends-member:
 - ["CSo11UIResponder", "CGSize"]
 - ["CSo11UIResponder", "NSCoder"]
 - !private ["CSo11UIResponder", "SKColor"]
+- ["CSo11UIResponder", "SKLabelNode"]
 - ["CSo11UIResponder", "SKSpriteNode"]
 - !private ["CSo11UIResponder", "Scene"]
 - ["CSo11UIResponder", "Set"]
@@ -460,8 +517,11 @@ depends-member:
 - !private ["CSo11UIResponder", "containsPoint"]
 - !private ["CSo11UIResponder", "convertPointFromView"]
 - !private ["CSo11UIResponder", "fatalError"]
+- !private ["CSo11UIResponder", "fontColor"]
+- !private ["CSo11UIResponder", "fontSize"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "labelWin"]
 - !private ["CSo11UIResponder", "name"]
 - !private ["CSo11UIResponder", "position"]
 - !private ["CSo11UIResponder", "presentScene"]
@@ -535,6 +595,7 @@ depends-nominal:
 - "Sq"
 - !private "Ps21RandomAccessIndexType"
 - "CSo12SKEffectNode"
+- !private "CSo11SKLabelNode"
 - "CSo6SKNode"
 - "CSo7SKScene"
 - !private "CSo12SKSpriteNode"
@@ -583,4 +644,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "7ab07544b1902bea33981e2f9fde5b5e"
+interface-hash: "d0ac9c896fb9390e66b6c3e287309620"

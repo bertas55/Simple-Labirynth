@@ -1,11 +1,11 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
 options: "e8c5f3f314de63c7ebc92569b17028fc"
-build_time: [520275614, 213785000]
+build_time: [520373101, 150343000]
 inputs:
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/MazeBuilder.swift": [520216729, 0]
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/TileMap.swift": [520275612, 0]
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/GameOverScene.swift": [520272839, 0]
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Scene.swift": [520275506, 0]
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Controls.swift": [519939582, 0]
-  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/GameViewController.swift": [519936807, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/TileMap.swift": [520372757, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/GameOverScene.swift": [520285252, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Direction.swift": [520373097, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Scene.swift": [520373016, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/Player.swift": [520372856, 0]
+  "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/GameViewController.swift": [520289272, 0]
   "/Users/hubert/dev/Xcode/iOS/SimpleLabirynth/SimpleLabirynth/AppDelegate.swift": [519906692, 0]

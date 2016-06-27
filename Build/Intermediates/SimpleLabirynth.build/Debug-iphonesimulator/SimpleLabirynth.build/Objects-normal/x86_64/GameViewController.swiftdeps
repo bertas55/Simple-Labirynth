@@ -8,18 +8,18 @@ provides-member:
 provides-dynamic-lookup:
 - "shouldAutorotate"
 - "prefersStatusBarHidden"
-- "viewDidLoad"
 - "supportedInterfaceOrientations"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
-- !private "UIDevice"
-- "UIInterfaceOrientationMask"
+- "Bool"
 - !private "=="
+- !private "SKView"
 - "GameViewController"
+- "UIInterfaceOrientationMask"
 - !private "Scene"
 - !private "BooleanLiteralType"
-- !private "SKView"
-- "Bool"
+- !private "UIDevice"
 - "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "Scene"]
@@ -33,8 +33,6 @@ depends-member:
 - !private ["Ps9AnyObject", "presentScene"]
 - !private ["Ps9AnyObject", "scaleMode"]
 - ["Ps9AnyObject", "shouldAutorotate"]
-- !private ["Ps9AnyObject", "showsFPS"]
-- !private ["Ps9AnyObject", "showsNodeCount"]
 - ["Ps9AnyObject", "supportedInterfaceOrientations"]
 - !private ["Ps9AnyObject", "userInterfaceIdiom"]
 - !private ["Ps9AnyObject", "view"]
@@ -57,8 +55,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "presentScene"]
 - !private ["Ps11CVarArgType", "scaleMode"]
 - ["Ps11CVarArgType", "shouldAutorotate"]
-- !private ["Ps11CVarArgType", "showsFPS"]
-- !private ["Ps11CVarArgType", "showsNodeCount"]
 - ["Ps11CVarArgType", "supportedInterfaceOrientations"]
 - !private ["Ps11CVarArgType", "userInterfaceIdiom"]
 - !private ["Ps11CVarArgType", "view"]
@@ -75,8 +71,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "presentScene"]
 - !private ["Ps28CustomDebugStringConvertible", "scaleMode"]
 - ["Ps28CustomDebugStringConvertible", "shouldAutorotate"]
-- !private ["Ps28CustomDebugStringConvertible", "showsFPS"]
-- !private ["Ps28CustomDebugStringConvertible", "showsNodeCount"]
 - ["Ps28CustomDebugStringConvertible", "supportedInterfaceOrientations"]
 - !private ["Ps28CustomDebugStringConvertible", "userInterfaceIdiom"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
@@ -94,8 +88,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "presentScene"]
 - !private ["Ps23CustomStringConvertible", "scaleMode"]
 - ["Ps23CustomStringConvertible", "shouldAutorotate"]
-- !private ["Ps23CustomStringConvertible", "showsFPS"]
-- !private ["Ps23CustomStringConvertible", "showsNodeCount"]
 - ["Ps23CustomStringConvertible", "supportedInterfaceOrientations"]
 - !private ["Ps23CustomStringConvertible", "userInterfaceIdiom"]
 - !private ["Ps23CustomStringConvertible", "view"]
@@ -118,8 +110,6 @@ depends-member:
 - !private ["Ps9Equatable", "presentScene"]
 - !private ["Ps9Equatable", "scaleMode"]
 - ["Ps9Equatable", "shouldAutorotate"]
-- !private ["Ps9Equatable", "showsFPS"]
-- !private ["Ps9Equatable", "showsNodeCount"]
 - !private ["Ps9Equatable", "size"]
 - ["Ps9Equatable", "supportedInterfaceOrientations"]
 - !private ["Ps9Equatable", "userInterfaceIdiom"]
@@ -154,8 +144,6 @@ depends-member:
 - !private ["Ps8Hashable", "presentScene"]
 - !private ["Ps8Hashable", "scaleMode"]
 - ["Ps8Hashable", "shouldAutorotate"]
-- !private ["Ps8Hashable", "showsFPS"]
-- !private ["Ps8Hashable", "showsNodeCount"]
 - ["Ps8Hashable", "supportedInterfaceOrientations"]
 - !private ["Ps8Hashable", "userInterfaceIdiom"]
 - !private ["Ps8Hashable", "view"]
@@ -172,8 +160,6 @@ depends-member:
 - !private ["PSo8NSCoding", "presentScene"]
 - !private ["PSo8NSCoding", "scaleMode"]
 - ["PSo8NSCoding", "shouldAutorotate"]
-- !private ["PSo8NSCoding", "showsFPS"]
-- !private ["PSo8NSCoding", "showsNodeCount"]
 - ["PSo8NSCoding", "supportedInterfaceOrientations"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -204,8 +190,6 @@ depends-member:
 - !private ["CSo8NSObject", "presentScene"]
 - !private ["CSo8NSObject", "scaleMode"]
 - ["CSo8NSObject", "shouldAutorotate"]
-- !private ["CSo8NSObject", "showsFPS"]
-- !private ["CSo8NSObject", "showsNodeCount"]
 - ["CSo8NSObject", "supportedInterfaceOrientations"]
 - !private ["CSo8NSObject", "userInterfaceIdiom"]
 - !private ["CSo8NSObject", "view"]
@@ -221,8 +205,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "presentScene"]
 - !private ["PSo16NSObjectProtocol", "scaleMode"]
 - ["PSo16NSObjectProtocol", "shouldAutorotate"]
-- !private ["PSo16NSObjectProtocol", "showsFPS"]
-- !private ["PSo16NSObjectProtocol", "showsNodeCount"]
 - ["PSo16NSObjectProtocol", "supportedInterfaceOrientations"]
 - !private ["PSo16NSObjectProtocol", "userInterfaceIdiom"]
 - !private ["PSo16NSObjectProtocol", "view"]
@@ -242,8 +224,6 @@ depends-member:
 - !private ["CSo6SKView", "bounds"]
 - !private ["CSo6SKView", "ignoresSiblingOrder"]
 - !private ["CSo6SKView", "presentScene"]
-- !private ["CSo6SKView", "showsFPS"]
-- !private ["CSo6SKView", "showsNodeCount"]
 - !private ["C15SimpleLabirynth5Scene", "deinit"]
 - !private ["C15SimpleLabirynth5Scene", "init"]
 - !private ["C15SimpleLabirynth5Scene", "scaleMode"]
@@ -252,13 +232,9 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "bounds"]
 - !private ["PSo29UIAccessibilityIdentification", "ignoresSiblingOrder"]
 - !private ["PSo29UIAccessibilityIdentification", "presentScene"]
-- !private ["PSo29UIAccessibilityIdentification", "showsFPS"]
-- !private ["PSo29UIAccessibilityIdentification", "showsNodeCount"]
 - !private ["PSo12UIAppearance", "bounds"]
 - !private ["PSo12UIAppearance", "ignoresSiblingOrder"]
 - !private ["PSo12UIAppearance", "presentScene"]
-- !private ["PSo12UIAppearance", "showsFPS"]
-- !private ["PSo12UIAppearance", "showsNodeCount"]
 - !private ["PSo21UIAppearanceContainer", "Scene"]
 - !private ["PSo21UIAppearanceContainer", "UIDevice"]
 - !private ["PSo21UIAppearanceContainer", "bounds"]
@@ -268,8 +244,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "prefersStatusBarHidden"]
 - !private ["PSo21UIAppearanceContainer", "presentScene"]
 - ["PSo21UIAppearanceContainer", "shouldAutorotate"]
-- !private ["PSo21UIAppearanceContainer", "showsFPS"]
-- !private ["PSo21UIAppearanceContainer", "showsNodeCount"]
 - ["PSo21UIAppearanceContainer", "supportedInterfaceOrientations"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -287,15 +261,11 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "bounds"]
 - !private ["PSo17UICoordinateSpace", "ignoresSiblingOrder"]
 - !private ["PSo17UICoordinateSpace", "presentScene"]
-- !private ["PSo17UICoordinateSpace", "showsFPS"]
-- !private ["PSo17UICoordinateSpace", "showsNodeCount"]
 - !private ["CSo8UIDevice", "currentDevice"]
 - !private ["CSo8UIDevice", "userInterfaceIdiom"]
 - !private ["PSo13UIDynamicItem", "bounds"]
 - !private ["PSo13UIDynamicItem", "ignoresSiblingOrder"]
 - !private ["PSo13UIDynamicItem", "presentScene"]
-- !private ["PSo13UIDynamicItem", "showsFPS"]
-- !private ["PSo13UIDynamicItem", "showsNodeCount"]
 - !private ["PSo18UIFocusEnvironment", "Scene"]
 - !private ["PSo18UIFocusEnvironment", "UIDevice"]
 - !private ["PSo18UIFocusEnvironment", "bounds"]
@@ -305,8 +275,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "prefersStatusBarHidden"]
 - !private ["PSo18UIFocusEnvironment", "presentScene"]
 - ["PSo18UIFocusEnvironment", "shouldAutorotate"]
-- !private ["PSo18UIFocusEnvironment", "showsFPS"]
-- !private ["PSo18UIFocusEnvironment", "showsNodeCount"]
 - ["PSo18UIFocusEnvironment", "supportedInterfaceOrientations"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
@@ -326,8 +294,6 @@ depends-member:
 - !private ["CSo11UIResponder", "presentScene"]
 - !private ["CSo11UIResponder", "scaleMode"]
 - ["CSo11UIResponder", "shouldAutorotate"]
-- !private ["CSo11UIResponder", "showsFPS"]
-- !private ["CSo11UIResponder", "showsNodeCount"]
 - ["CSo11UIResponder", "supportedInterfaceOrientations"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -350,8 +316,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "prefersStatusBarHidden"]
 - !private ["PSo18UITraitEnvironment", "presentScene"]
 - ["PSo18UITraitEnvironment", "shouldAutorotate"]
-- !private ["PSo18UITraitEnvironment", "showsFPS"]
-- !private ["PSo18UITraitEnvironment", "showsNodeCount"]
 - ["PSo18UITraitEnvironment", "supportedInterfaceOrientations"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -363,8 +327,6 @@ depends-member:
 - !private ["CSo6UIView", "deinit"]
 - !private ["CSo6UIView", "ignoresSiblingOrder"]
 - !private ["CSo6UIView", "presentScene"]
-- !private ["CSo6UIView", "showsFPS"]
-- !private ["CSo6UIView", "showsNodeCount"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "SKView"]
 - !private ["CSo16UIViewController", "Scene"]
@@ -384,8 +346,6 @@ depends-member:
 - !private ["Ps12_Reflectable", "bounds"]
 - !private ["Ps12_Reflectable", "ignoresSiblingOrder"]
 - !private ["Ps12_Reflectable", "presentScene"]
-- !private ["Ps12_Reflectable", "showsFPS"]
-- !private ["Ps12_Reflectable", "showsNodeCount"]
 - !private ["Ps12_Reflectable", "size"]
 depends-nominal:
 - "Ps9AnyObject"
