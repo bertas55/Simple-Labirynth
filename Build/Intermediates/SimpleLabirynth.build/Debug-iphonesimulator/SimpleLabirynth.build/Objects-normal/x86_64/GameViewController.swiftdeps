@@ -6,21 +6,21 @@ provides-nominal:
 provides-member:
 - ["C15SimpleLabirynth18GameViewController", ""]
 provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
 - "shouldAutorotate"
 - "prefersStatusBarHidden"
 - "supportedInterfaceOrientations"
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
 depends-top-level:
-- "Bool"
-- !private "=="
+- !private "BooleanLiteralType"
 - !private "SKView"
 - "GameViewController"
 - "UIInterfaceOrientationMask"
-- !private "Scene"
-- !private "BooleanLiteralType"
+- "Bool"
 - !private "UIDevice"
+- !private "Scene"
 - "UIViewController"
+- !private "=="
 depends-member:
 - !private ["Ps9AnyObject", "Scene"]
 - !private ["Ps9AnyObject", "UIDevice"]

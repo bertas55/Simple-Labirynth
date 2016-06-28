@@ -84,10 +84,30 @@ class TileMap : SKNode {
 
         self.mapSize = mapSize
 
-        // Exit coordinates
-        let y = Int(arc4random_uniform(UInt32(mapSize.height - 2))) + 1
-        let x = 0
+        // 0 - left, 1 - right, 2 - up, 3 - down
+        let side = arc4random_uniform(UInt32(4))
+        var x, y: Int
+
+        switch side {
+        case 0:
+            x = 0
+            y = Int(arc4random_uniform(UInt32(mapSize.height - 2))) + 1
+        case 1:
+            x = Int(mapSize.width) - 1
+            y = Int(arc4random_uniform(UInt32(mapSize.height - 2))) + 1
+        case 2:
+            x = Int(arc4random_uniform(UInt32(mapSize.width - 2))) + 1
+            y = 0
+        case 3:
+            x = Int(arc4random_uniform(UInt32(mapSize.width - 2))) + 1
+            y = Int(mapSize.height) - 1
+        default:
+            x = 0
+            y = 1
+        }
+
         self.exitCoords = CGPoint(x: x, y: y)
+
 
         super.init()
 
@@ -104,6 +124,7 @@ class TileMap : SKNode {
 
         fatalError("init(coder:) has not beed implemented")
     }
+
 
     private func createMap() {
 

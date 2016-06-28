@@ -15,48 +15,48 @@ provides-member:
 - ["C15SimpleLabirynth4Tile", ""]
 - ["C15SimpleLabirynth7TileMap", ""]
 provides-dynamic-lookup:
+- "size"
 - "exitCoords"
 - "coord"
-- "tilePositionForCoord"
 - "mapSize"
-- "tileCoordForPosition"
-- "size"
 - "tileLayer"
+- "tileCoordForPosition"
+- "tilePositionForCoord"
 depends-top-level:
-- !private "+"
-- !private "..<"
-- !private "%"
-- "Tile"
-- "Array"
-- !private "StringLiteralType"
-- "=="
-- !private "~="
-- "CGPoint"
-- !private "Direction"
-- !private "fatalError"
-- !private "&&"
-- "NSCoder"
-- "SKSpriteNode"
-- "CGSize"
-- "SKColor"
-- "Queue"
-- "String"
 - "TileMap"
+- !private "fatalError"
+- "=="
+- "Tile"
+- !private "~="
 - !private "..."
-- "TileType"
-- "Bool"
-- !private "-"
-- !private "BooleanLiteralType"
-- !private "!="
-- "SKNode"
-- !private "<"
-- "Int"
-- !private "/"
-- !private "*"
 - !private "!"
-- !private "arc4random_uniform"
+- "Int"
+- !private "+"
+- "Array"
+- !private "BooleanLiteralType"
+- !private "-"
+- "CGSize"
+- "CGPoint"
+- !private "..<"
+- "Queue"
 - !private "+="
+- !private "Direction"
+- "Bool"
+- !private "<"
+- !private "*"
+- !private "&&"
+- !private "%"
+- "SKNode"
+- "SKColor"
+- "SKSpriteNode"
+- !private "StringLiteralType"
+- !private "!="
+- !private "/"
+- "TileType"
+- "String"
 - !private "UInt32"
+- !private "arc4random_uniform"
+- "NSCoder"
 depends-member:
 - ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "CGPoint"]
@@ -293,6 +293,7 @@ depends-member:
 - !private ["O15SimpleLabirynth9Direction", "Up"]
 - !private ["O15SimpleLabirynth9Direction", "dx"]
 - !private ["O15SimpleLabirynth9Direction", "dy"]
+- !private ["Sd", "deinit"]
 - ["Ps9Equatable", "Array"]
 - !private ["Ps9Equatable", "Bound"]
 - !private ["Ps9Equatable", "CGPoint"]
@@ -547,6 +548,7 @@ depends-member:
 - ["PSo9NSCopying", "tiles"]
 - ["PSo9NSCopying", "type"]
 - ["PSo9NSCopying", ""]
+- !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "Array"]
 - ["CSo8NSObject", "CGPoint"]
 - ["CSo8NSObject", "CGSize"]
@@ -564,6 +566,7 @@ depends-member:
 - !private ["CSo8NSObject", "convertPoint"]
 - ["CSo8NSObject", "coord"]
 - ["CSo8NSObject", "createMap"]
+- !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "exitCoords"]
 - !private ["CSo8NSObject", "fatalError"]
 - ["CSo8NSObject", "findShortestPathToExit"]
@@ -606,6 +609,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "type"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo7NSValue", "deinit"]
 - !private ["Ps21NilLiteralConvertible", "Distance"]
 - !private ["Sq", "Distance"]
 - !private ["Sq", "deinit"]
@@ -800,7 +804,10 @@ depends-member:
 - ["CSo11UIResponder", "tilePositionForCoord"]
 - ["CSo11UIResponder", "tiles"]
 - ["CSo11UIResponder", "type"]
+- !private ["Vs6UInt32", "Distance"]
+- !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt32", "init"]
+- !private ["Ps19UnsignedIntegerType", "Distance"]
 - !private ["Ps19UnsignedIntegerType", "init"]
 - !private ["Ps10_ArrayType", "Element"]
 - ["Ps10_ArrayType", "Generator"]
@@ -836,6 +843,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "removeLast"]
 - !private ["Ps24_DestructorSafeContainer", "reverse"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "Distance"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "init"]
 - ["Ps14_Incrementable", "Distance"]
 - ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -874,6 +882,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "removeLast"]
 - !private ["Ps21_ObjectiveCBridgeable", "reverse"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Vs26_OptionalNilComparisonType", "deinit"]
 - ["Ps22_RandomAccessAmbiguity", "Distance"]
 - ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["Ps22_RandomAccessAmbiguity", "Stride"]
@@ -937,6 +946,7 @@ depends-nominal:
 - "Ps28CustomDebugStringConvertible"
 - "Ps23CustomStringConvertible"
 - !private "O15SimpleLabirynth9Direction"
+- !private "Sd"
 - "Ps9Equatable"
 - "Ps16ForwardIndexType"
 - "Ps13GeneratorType"
@@ -956,9 +966,11 @@ depends-nominal:
 - "Ps16MutableSliceable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
+- !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo7NSValue"
 - !private "Ps21NilLiteralConvertible"
 - !private "Sq"
 - "V15SimpleLabirynth5Queue"
@@ -992,6 +1004,7 @@ depends-nominal:
 - "Ps22_IntegerArithmeticType"
 - "Ps12_IntegerType"
 - "Ps21_ObjectiveCBridgeable"
+- !private "Vs26_OptionalNilComparisonType"
 - "Ps22_RandomAccessAmbiguity"
 - "Ps12_Reflectable"
 - "Ps18_SignedIntegerType"
