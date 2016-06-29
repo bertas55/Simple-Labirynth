@@ -12,8 +12,8 @@ class Scene: SKScene {
 
     let tileMap: TileMap
     let player: Player
-    let mapSize: CGSize
-    let controllButtonSize: CGSize
+    let mapSize: (width: Int, height: Int)
+    let controllButtonSize: (width: Int, height: Int)
 
     var buttonUp: SKSpriteNode?
     var buttonDown: SKSpriteNode?
@@ -24,9 +24,9 @@ class Scene: SKScene {
 
     override init(size: CGSize) {
 
-        self.controllButtonSize = CGSize(width: 58, height: 58)
-        self.mapSize = CGSize(width: size.width / Tile.size.width,
-                              height: (size.height - 2 * controllButtonSize.height) / Tile.size.height)
+        self.controllButtonSize = (width: 58, height: 58)
+        self.mapSize = (width: Int(size.width) / Tile.size.width,
+                              height: (Int(size.height) - 2 * controllButtonSize.height) / Tile.size.height)
 
         self.tileMap = TileMap(mapSize: self.mapSize)
 
@@ -44,28 +44,28 @@ class Scene: SKScene {
         self.addChild(tileMap)
 
         self.buttonUp = SKSpriteNode(imageNamed: "buttonUp")
-        self.buttonUp!.position = CGPointMake(self.controllButtonSize.width / 2 + 15, self.controllButtonSize.height * 1.5)
+        self.buttonUp!.position = CGPoint(x: CGFloat(self.controllButtonSize.width / 2 + 15), y: CGFloat(self.controllButtonSize.height) * 1.5)
         self.buttonUp!.name = "buttonUp"
         self.buttonUp!.zPosition = 10
 
         self.addChild(self.buttonUp!)
 
         self.buttonDown = SKSpriteNode(imageNamed: "buttonDown")
-        self.buttonDown!.position = CGPointMake(self.controllButtonSize.width / 2 + 15, self.controllButtonSize.height / 2)
+        self.buttonDown!.position = CGPoint(x: self.controllButtonSize.width / 2 + 15, y: self.controllButtonSize.height / 2)
         self.buttonDown!.name = "buttonDown"
         self.buttonDown!.zPosition = 10
 
         self.addChild(self.buttonDown!)
 
         self.buttonRight = SKSpriteNode(imageNamed: "buttonRight")
-        self.buttonRight!.position = CGPointMake(CGRectGetMaxX(self.frame) - self.controllButtonSize.width / 2, self.controllButtonSize.height)
+        self.buttonRight!.position = CGPoint(x: CGRectGetMaxX(self.frame) - CGFloat(self.controllButtonSize.width / 2), y: CGFloat(self.controllButtonSize.height))
         self.buttonRight!.name = "buttonRight"
         self.buttonRight!.zPosition = 10
 
         self.addChild(self.buttonRight!)
 
         self.buttonLeft = SKSpriteNode(imageNamed: "buttonLeft")
-        self.buttonLeft!.position = CGPointMake(CGRectGetMaxX(self.frame) - self.controllButtonSize.width * 1.5, self.controllButtonSize.height)
+        self.buttonLeft!.position = CGPoint(x: CGRectGetMaxX(self.frame) - CGFloat(self.controllButtonSize.width) * 1.5, y: CGFloat(self.controllButtonSize.height))
         self.buttonLeft!.name = "buttonLeft"
         self.buttonLeft!.zPosition = 10
 
@@ -105,13 +105,16 @@ class Scene: SKScene {
 
                 showPath(path)
 
-                let delay = 3 * Double(NSEC_PER_SEC)
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue()) {
-                    self.enumerateChildNodesWithName("Path", usingBlock: { node,_ in
-                        node.removeFromParent()
+                tileMap.runAction(SKAction.sequence([
+                    SKAction.waitForDuration(3.0),
+
+                    SKAction.runBlock({ 
+                        self.enumerateChildNodesWithName("Path", usingBlock: { node,_ in
+                            node.removeFromParent()
+                        })
                     })
-                }
+                    ]))
+
             default:
                 break
             }
@@ -127,11 +130,10 @@ class Scene: SKScene {
         }
     }
 
-
     private func showPath(path: [(x: Int, y: Int)]) {
         for i in path {
-            let tile = Tile(type: TileType.Path, coord: CGPoint(x: i.x, y: i.y))
-            let tilePositionInMap = tileMap.tilePositionForCoord(CGPoint(x: i.x, y: i.y))
+            let tile = Tile(type: TileType.Path, coord: (i.x, i.y))
+            let tilePositionInMap = tileMap.tilePositionForCoord((i.x, i.y))
             
             tile.position.x = tileMap.position.x + tilePositionInMap.x
             tile.position.y = tileMap.position.y + tilePositionInMap.y
@@ -141,13 +143,4 @@ class Scene: SKScene {
             self.addChild(tile)
         }
     }
-
-
-
-
-
-
-
-
-
 }

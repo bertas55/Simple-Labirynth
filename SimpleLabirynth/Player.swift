@@ -10,7 +10,7 @@ import SpriteKit
 
 class Player: Tile {
 
-    private let tileMap: TileMap
+    unowned private let tileMap: TileMap
 
     init(tileMap: TileMap) {
 
@@ -18,7 +18,7 @@ class Player: Tile {
 
         // Position in center of tileMap
         let currentCoord = (x: Int(tileMap.mapSize.width / 2), y: Int(tileMap.mapSize.height / 2))
-        var playerPosition = CGPoint(x: 0, y: 0)
+        var playerPosition = (x: 0, y: 0)
 
         let directions = [Direction.Left, Direction.Down, Direction.Right, Direction.Up, Direction.LeftDown, Direction.LeftUp, Direction.RightDown, Direction.RightUp]
 
@@ -27,7 +27,7 @@ class Player: Tile {
             let y = currentCoord.y + dir.dy
 
             if tileMap.tiles[y][x]?.type == TileType.Ground {
-                playerPosition = CGPoint(x: x, y: y)
+                playerPosition = (x: x, y: y)
                 break
             }
         }
@@ -44,19 +44,19 @@ class Player: Tile {
 
     func move(direction: Direction) {
 
-        var destinationPoint: CGPoint
+        var destinationPoint: (x: Int, y: Int)
 
         switch direction {
         case .Up:
-            destinationPoint = CGPointMake(self.position.x, self.position.y + Tile.size.height)
+            destinationPoint = (x: Int(self.position.x), y: Int(self.position.y) + Tile.size.height)
         case .Down:
-            destinationPoint = CGPointMake(self.position.x, self.position.y - Tile.size.height)
+            destinationPoint = (x: Int(self.position.x), y: Int(self.position.y) - Tile.size.height)
         case .Left:
-            destinationPoint = CGPointMake(self.position.x - Tile.size.width, self.position.y)
+            destinationPoint = (x: Int(self.position.x) - Tile.size.width, y: Int(self.position.y))
         case .Right:
-            destinationPoint = CGPointMake(self.position.x + Tile.size.width, self.position.y)
+            destinationPoint = (x: Int(self.position.x) + Tile.size.width, y: Int(self.position.y))
         default:
-            destinationPoint = CGPointMake(self.position.x, self.position.y)
+            destinationPoint = (x: Int(self.position.x), y: Int(self.position.y))
         }
 
         if !isCollision(destinationPoint) {
@@ -65,16 +65,12 @@ class Player: Tile {
         }
     }
 
-    private func isCollision(coord: CGPoint) -> Bool {
+    private func isCollision(coord: (x: Int, y: Int)) -> Bool {
 
         let mapPoint = tileMap.tileCoordForPosition(coord)
         let x = Int(mapPoint.x)
         let y = Int(mapPoint.y)
 
-        if self.tileMap.tiles[y][x]?.type == TileType.Wall {
-            return true
-        } else {
-            return false
-        }
+        return self.tileMap.tiles[y][x]?.type == TileType.Wall
     }
 }

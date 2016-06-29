@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B41D17DB1D22F03300FF06D9 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D17DA1D22F03300FF06D9 /* Queue.swift */; };
+		B41D17DD1D22F05600FF06D9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D17DC1D22F05600FF06D9 /* Tile.swift */; };
+		B41D17DF1D22F09100FF06D9 /* TileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41D17DE1D22F09100FF06D9 /* TileType.swift */; };
 		B42165601D1BDC1500FA8F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B421655F1D1BDC1500FA8F8B /* Assets.xcassets */; };
 		B48943341D1F6F4F007DEE23 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48943331D1F6F4F007DEE23 /* GameOverScene.swift */; };
 		B4969C4E1D1AA084008B3451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4969C4D1D1AA084008B3451 /* AppDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B41D17DA1D22F03300FF06D9 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		B41D17DC1D22F05600FF06D9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		B41D17DE1D22F09100FF06D9 /* TileType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileType.swift; sourceTree = "<group>"; };
 		B421655F1D1BDC1500FA8F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B48943331D1F6F4F007DEE23 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		B4969C4A1D1AA084008B3451 /* SimpleLabirynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleLabirynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +76,10 @@
 				B4969C551D1AA084008B3451 /* Main.storyboard */,
 				B4969C5A1D1AA084008B3451 /* LaunchScreen.storyboard */,
 				B4969C5D1D1AA084008B3451 /* Info.plist */,
+				B41D17DC1D22F05600FF06D9 /* Tile.swift */,
 				B4969C651D1AAF91008B3451 /* TileMap.swift */,
+				B41D17DE1D22F09100FF06D9 /* TileType.swift */,
+				B41D17DA1D22F03300FF06D9 /* Queue.swift */,
 				B4969C671D1AEBF5008B3451 /* Scene.swift */,
 				B4DD83521D21B48200A426B2 /* Player.swift */,
 				B48943331D1F6F4F007DEE23 /* GameOverScene.swift */,
@@ -153,8 +162,11 @@
 				B4969C661D1AAF91008B3451 /* TileMap.swift in Sources */,
 				B48943341D1F6F4F007DEE23 /* GameOverScene.swift in Sources */,
 				B4B36B3D1D20482F00DA5EA8 /* Direction.swift in Sources */,
+				B41D17DB1D22F03300FF06D9 /* Queue.swift in Sources */,
 				B4969C681D1AEBF5008B3451 /* Scene.swift in Sources */,
 				B4DD83531D21B48200A426B2 /* Player.swift in Sources */,
+				B41D17DD1D22F05600FF06D9 /* Tile.swift in Sources */,
+				B41D17DF1D22F09100FF06D9 /* TileType.swift in Sources */,
 				B4969C541D1AA084008B3451 /* GameViewController.swift in Sources */,
 				B4969C4E1D1AA084008B3451 /* AppDelegate.swift in Sources */,
 			);
